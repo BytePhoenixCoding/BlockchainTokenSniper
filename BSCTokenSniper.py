@@ -2,7 +2,7 @@ print("Loading...")
 
 from web3 import Web3
 from tkinter import messagebox
-import datetime #from datetime import datetime
+import datetime 
 import threading
 import json
 import asyncio
