@@ -51,14 +51,6 @@ def getTimestamp():
 
 #-------------------------------- INITIALISE ------------------------------------------
 
-checkAnnouncementURL = "https://bsctokensniperauth.000webhostapp.com/?auth=1"
-checkAnnouncementRequest = requests.get(url = checkAnnouncementURL)
-announceMsg = checkAnnouncementRequest.json()['msg']
-if(announceMsg != ""):
-    print(style.YELLOW + style.UNDERLINE + announceMsg + style.WHITE + style.RESET)
-    print("") #line break
-
-
 timeStampThread = threading.Thread(target=getTimestamp)
 timeStampThread.start()
 
