@@ -1,7 +1,7 @@
-# BSCTokenSniper
+# BSCTokenSniper v1.0
 A bot written in Python to automatically buy tokens on the Binance Smart Chain as soon as liquidity is provided.
 
-BSCTokenSniper is a bot written in Python to detect new PairCreated events in the Binance Smart Chain (when a liquidity pair has been created) and buy the token.
+BSCTokenSniper is a bot written in Python to detect new PairCreated events in the Binance Smart Chain (when a liquidity pair has been created) and buy the token. It is quite reliable and works well but it is the first version, so if you find any problems/improvements/suggestions please let me know. 
 
 Description
 
