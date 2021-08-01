@@ -35,7 +35,8 @@ Setup
 1)	Install all dependencies (above)
 2)	Edit config.json file with your wallet address, private key and BscScan API key.
 3)	(Optional) if you are in windows, open the command prompt and right-click the title bar, click ‘properties’ and set screen buffer size height to 2500. This allows you to scroll through the history of your token snipes.
-4)	Run ‘launchBSCTokenSniper.bat’ and you’re good to go!
+4)	In command prompt (assuming you are using windows) type 'python' and press enter, and check that it is recognized by the computer. If you get a message that says it isn't recognized, then change the 'launchBSCTokenSniper.bat' file and replace 'python' with the path to your python program's executable file.
+5)	Run ‘launchBSCTokenSniper.bat’ and you’re good to go!
 
 Configuration File
 
