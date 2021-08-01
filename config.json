@@ -6,7 +6,7 @@
    "transactionRevertTimeSeconds": "10000",
    "gasAmount": "300000",
    "gasPrice": "5",
-   "bscScanAPIKey": "1FVDWCJIZWGIUEW95V6QEG18XXK4N1C7GF",
+   "bscScanAPIKey": "Enter bscScan api key here",
    "observeOnly": "False",
    "checkSourceCode": "True",
    "checkValidPancakeV2": "False",
