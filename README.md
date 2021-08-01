@@ -92,7 +92,8 @@ Either:
 The bot isn’t sniping that fast (eg. couple seconds between detection and buying)
 - This is mainly due to internet speed and computer processing power. 
 
-Risks
+Risks:
+
 Investing in BSC tokens / shitcoins is risky and be aware you could lose all your money. For this reason, do not invest more money than you are prepared to lose.
 It is pretty much impossible to snipe bots very early and be sure it isn’t a rug pull. When people create tokens in most situations, they will manually create liquidity in PancakeSwap. This is when the bot will detect the token. If they burn / lock liquidity, they will then usually send their LP tokens manually to a deadcoin address or put them in a liquidity locker. Therefore, you can’t immediately snipe the tokens with 100% certainty they aren’t rugpulls.
 
