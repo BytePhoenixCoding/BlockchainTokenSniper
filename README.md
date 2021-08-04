@@ -107,7 +107,7 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 Things to do / improve / bug fixes / thoughts:
 
 - Clarify installation of web3 as alot of users had issues with it
-- Improve honeypot detection (at the moment it is very simple and some tokens are rewriting their code to bypass the bot's detection)
+- Improve honeypot detection (at the moment it is very simple and some tokens are rewriting their code to bypass the bot's detection) (bscheck.eu seem to do a good job of detecting honeypots better than the bot can do, will try to contact them and see how their detection algorithm works)
 - Improve reliability (occasionally it can freeze)
 - Use WebsocketProvider instead of HTTPProvider (faster so will snipe tokens quicker)
 - Implement a feature that makes the bot only invest in tokens that have a certain amount of liquidity (ie. only invest in tokens that have min. 10 BNB liquidity)
