@@ -59,8 +59,11 @@ The following json entries are for mini audit. Set all to false to disable mini 
 checkSourceCode: checks if source code is verified. This function is needed for all the other functions so if you disable this be sure to disable all the other audit options. Recommended.
 
 checkValidPancakeV2: checks if the correct PancakeSwap v2 router address is used in the code. Be aware some contracts may externally set their router address so this function may reject a potentially good token. Not recommended.
+
 checkMintFunction: checks if a mint function is present in the code. Recommended.
+
 checkHoneypot: checks the code to see if it might be a honeypot (where you can buy tokens but cannot sell). Recommended.
+
 checkPancakeV1Router: checks to see if the PancakeSwap v1 router address is used in the code. You will not be able to sell the tokens later on if PCS v1 router address is used. Highly recommended.
 
 Note: be very careful when editing config.json and make sure to not alter the syntax. For mini audit options, either use “True” or “False” making sure to capitalise the 1st letter. Any other spelling will not work.
@@ -101,7 +104,7 @@ It is pretty much impossible to snipe bots very early and be sure it isn’t a r
 The mini audit feature can’t be 100% accurate but aims to filter out the majority of scams / hacks and reduce the chance of losing your money.
 If a programmer creates token code in a unique way, they may be able to bypass detection although this is generally quite rare, as the majority of tokens are forks of big projects with very little of the code having been changed e.g., Safemoon.
 
-Things to do / improve / bug fixes:
+Things to do / improve / bug fixes / thoughts:
 
 - Clarify installation of web3 as alot of users had issues with it
 - Improve honeypot detection (at the moment it is very simple and some tokens are rewriting their code to bypass the bot's detection)
@@ -113,6 +116,7 @@ Things to do / improve / bug fixes:
 - Auto sell after certain profit reached?
 - Make ETHTokenSniper that does the exact same but runs on the ethereum blockchain
 - Make code more efficient so can run faster and snipe faster
+- Are all tokens that haven't verified their source code bad? Probably not. But I'm currently just assuming that developers will verify their source code before adding liquidity.
 
 If you’ve found this bot useful and have profited from it please consider donating any token to my BSC wallet address: 0xE75470B9a7c93038195ca116E342c42F6B3F758b
 
