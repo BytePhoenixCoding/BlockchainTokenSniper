@@ -101,6 +101,19 @@ It is pretty much impossible to snipe bots very early and be sure it isn’t a r
 The mini audit feature can’t be 100% accurate but aims to filter out the majority of scams / hacks and reduce the chance of losing your money.
 If a programmer creates token code in a unique way, they may be able to bypass detection although this is generally quite rare, as the majority of tokens are forks of big projects with very little of the code having been changed e.g., Safemoon.
 
+Things to do / improve / bug fixes:
+
+- Clarify installation of web3 as alot of users had issues with it
+- Improve honeypot detection (at the moment it is very simple and some tokens are rewriting their code to bypass the bot's detection)
+- Improve reliability (occasionally it can freeze)
+- Use WebsocketProvider instead of HTTPProvider (faster so will snipe tokens quicker)
+- Implement a feature that makes the bot only invest in tokens that have a certain amount of liquidity (ie. only invest in tokens that have min. 10 BNB liquidity)
+- Implement a GUI? Maybe
+- Look into rugpull detection
+- Auto sell after certain profit reached?
+- Make ETHTokenSniper that does the exact same but runs on the ethereum blockchain
+- Make code more efficient so can run faster and snipe faster
+
 If you’ve found this bot useful and have profited from it please consider donating any token to my BSC wallet address: 0xE75470B9a7c93038195ca116E342c42F6B3F758b
 
 
