@@ -118,6 +118,7 @@ Things to do / improve / bug fixes / thoughts:
 - Make code more efficient so can run faster and snipe faster
 - Are all tokens that haven't verified their source code bad? Probably not. But I'm currently just assuming that developers will verify their source code before adding liquidity. I can't tell if it's a scam or not if the source code isn't verified.
 - Ignore tokens that are called 'test'.
+- Make an option to snipe a specific token. The contract address of the token is provided, and as soon as liquidity is provided the bot instantly buys the token with a specified amount of BNB. Also maybe an option to sell it at a certain price point. Look what happened to Refinable, a bot bought a huge chunk of the tokens and made an insane amount of money in a few minutes.
 
 If you’ve found this bot useful and have profited from it please consider donating any token to my BSC wallet address: 0xE75470B9a7c93038195ca116E342c42F6B3F758b
 
