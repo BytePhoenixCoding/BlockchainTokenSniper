@@ -35,7 +35,8 @@ Setup
 1)	Install all dependencies (above)
 2)	Edit config.json file with your wallet address, private key and BscScan API key.
 3)	(Optional) if you are in windows, open the command prompt and right-click the title bar, click ‘properties’ and set screen buffer size height to 2500. This allows you to scroll through the history of your token snipes.
-4)	Run ‘launchBSCTokenSniper.bat’ and you’re good to go!
+4)	In command prompt (assuming you are using windows) type 'python' and press enter, and check that it is recognized by the computer. If you get a message that says it isn't recognized, then change the 'launchBSCTokenSniper.bat' file and replace 'python' with the path to your python program's executable file (make sure the filepath is in "" quotes).
+5)	Run ‘launchBSCTokenSniper.bat’ and you’re good to go!
 
 Configuration File
 
@@ -58,8 +59,11 @@ The following json entries are for mini audit. Set all to false to disable mini 
 checkSourceCode: checks if source code is verified. This function is needed for all the other functions so if you disable this be sure to disable all the other audit options. Recommended.
 
 checkValidPancakeV2: checks if the correct PancakeSwap v2 router address is used in the code. Be aware some contracts may externally set their router address so this function may reject a potentially good token. Not recommended.
+
 checkMintFunction: checks if a mint function is present in the code. Recommended.
+
 checkHoneypot: checks the code to see if it might be a honeypot (where you can buy tokens but cannot sell). Recommended.
+
 checkPancakeV1Router: checks to see if the PancakeSwap v1 router address is used in the code. You will not be able to sell the tokens later on if PCS v1 router address is used. Highly recommended.
 
 Note: be very careful when editing config.json and make sure to not alter the syntax. For mini audit options, either use “True” or “False” making sure to capitalise the 1st letter. Any other spelling will not work.
@@ -92,12 +96,29 @@ Either:
 The bot isn’t sniping that fast (eg. couple seconds between detection and buying)
 - This is mainly due to internet speed and computer processing power. 
 
-Risks
+Risks:
+
 Investing in BSC tokens / shitcoins is risky and be aware you could lose all your money. For this reason, do not invest more money than you are prepared to lose.
 It is pretty much impossible to snipe bots very early and be sure it isn’t a rug pull. When people create tokens in most situations, they will manually create liquidity in PancakeSwap. This is when the bot will detect the token. If they burn / lock liquidity, they will then usually send their LP tokens manually to a deadcoin address or put them in a liquidity locker. Therefore, you can’t immediately snipe the tokens with 100% certainty they aren’t rugpulls.
 
 The mini audit feature can’t be 100% accurate but aims to filter out the majority of scams / hacks and reduce the chance of losing your money.
 If a programmer creates token code in a unique way, they may be able to bypass detection although this is generally quite rare, as the majority of tokens are forks of big projects with very little of the code having been changed e.g., Safemoon.
+
+Things to do / improve / bug fixes / thoughts:
+
+- Clarify installation of web3 as alot of users had issues with it
+- Improve honeypot detection (at the moment it is very simple and some tokens are rewriting their code to bypass the bot's detection) (bscheck.eu seem to do a good job of detecting honeypots better than the bot can do, will try to contact them and see how their detection algorithm works)
+- Improve reliability (occasionally it can freeze)
+- Use WebsocketProvider instead of HTTPProvider (faster so will snipe tokens quicker)
+- Implement a feature that makes the bot only invest in tokens that have a certain amount of liquidity (ie. only invest in tokens that have min. 10 BNB liquidity)
+- Implement a GUI? Maybe
+- Look into rugpull detection
+- Auto sell after certain profit reached?
+- Make ETHTokenSniper that does the exact same but runs on the ethereum blockchain
+- Make code more efficient so can run faster and snipe faster
+- Are all tokens that haven't verified their source code bad? Probably not. But I'm currently just assuming that developers will verify their source code before adding liquidity. I can't tell if it's a scam or not if the source code isn't verified.
+- Ignore tokens that are called 'test'.
+- Make an option to snipe a specific token. The contract address of the token is provided, and as soon as liquidity is provided the bot instantly buys the token with a specified amount of BNB. Also maybe an option to sell it at a certain price point. Look what happened to Refinable, a bot bought a huge chunk of the tokens and made an insane amount of money in a few minutes.
 
 If you’ve found this bot useful and have profited from it please consider donating any token to my BSC wallet address: 0xE75470B9a7c93038195ca116E342c42F6B3F758b
 
