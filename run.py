@@ -10,7 +10,7 @@ def linux():
     os.system('python BSCTokenSniper_Linux.py')
  
 
-def wss()
+def wss():
     os.system('python BSCTokenSniper_Linux_wss.py')
 
     
