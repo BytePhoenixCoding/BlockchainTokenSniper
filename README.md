@@ -16,6 +16,11 @@ BSCTokenSniper is a bot written in Python to detect new PairCreated events in th
 web3 nodejs not needed here.
 
 
+Screenshot
+
+
+![ss1](https://raw.githubusercontent.com/geeks121/BSCTokenSniper/main/images/simple.PNG)
+
 
 Description
 
