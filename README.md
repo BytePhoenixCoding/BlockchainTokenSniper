@@ -1,10 +1,21 @@
-# BSCTokenSniper v1.0
+# BSCTokenSniper v1.1
 A bot written in Python to automatically buy tokens on the Binance Smart Chain as soon as liquidity is provided.
 
 BSCTokenSniper is a bot written in Python to detect new PairCreated events in the Binance Smart Chain (when a liquidity pair has been created) and buy the token. It is quite reliable and works well but it is the first version, so if you find any problems/improvements/suggestions please let me know by raising an issue.
 
 #Update
-Some user facing error when run this bot on Linux or MacOS, the error is because ctypes windll which is for windows. And there minor update to run in linux version. And runing perfectly.
+
+- Some user facing error when run this bot on Linux or MacOS, the error is because ctypes windll which is for windows. And there minor update to run in linux version. And runing perfectly.
+
+- added run.py to make it simple for you. there 3 option you can run, 
+-
+- 1. Windows
+- 2. Linux
+- 3. Install Dependendency 
+-
+web3 nodejs not needed here.
+
+
 
 Description
 
@@ -34,12 +45,18 @@ Prerequisites
 - BSC wallet address and private key
 - enough BNB in your wallet to snipe tokens.
 
-Setup
+Setup for Windows.
 1)	Install all dependencies (above)
 2)	Edit config.json file with your wallet address, private key and BscScan API key.
 3)	(Optional) if you are in windows, open the command prompt and right-click the title bar, click ‘properties’ and set screen buffer size height to 2500. This allows you to scroll through the history of your token snipes.
 4)	In command prompt (assuming you are using windows) type 'python' and press enter, and check that it is recognized by the computer. If you get a message that says it isn't recognized, then change the 'launchBSCTokenSniper.bat' file and replace 'python' with the path to your python program's executable file (make sure the filepath is in "" quotes).
 5)	Run ‘launchBSCTokenSniper.bat’ and you’re good to go!
+
+Setup for Linux & Mac User.
+1) Run : python run.py
+2) Select option 3 first.
+3) Select for your own system.
+4) Don't forget to setup config.json
 
 Configuration File
 
@@ -124,6 +141,8 @@ Things to do / improve / bug fixes / thoughts:
 - Make an option to snipe a specific token. The contract address of the token is provided, and as soon as liquidity is provided the bot instantly buys the token with a specified amount of BNB. Also maybe an option to sell it at a certain price point. Look what happened to Refinable, a bot bought a huge chunk of the tokens and made an insane amount of money in a few minutes.
 
 If you’ve found this bot useful and have profited from it please consider donating any token to my BSC wallet address: 0xE75470B9a7c93038195ca116E342c42F6B3F758b
+
+donation to geeks121 : 0xbeef1858cbddb48319893b028be9d914d45f51d9
 
 
 
