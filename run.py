@@ -42,11 +42,12 @@ def print_msg_box(msg, indent=1, width=None, title=None):
 # ---------------------
 
 msg = "# Http Version # \n " \
-      "1. Windows \n" \
+     "1. Windows \n" \
       "2. Linux \n" \
       "# Websocket version (Recomended) # \n " \
-      "3. Linux Websocket \n" \
+     "3. Linux Websocket \n" \
       "4. Windows Websocket \n" \
+      "# ------------- # \n " \
       "5. Install Dependency"
 
 print_msg_box(msg=msg, indent=2, title='BSC TOKEN SNIPER')
