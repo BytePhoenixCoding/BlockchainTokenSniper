@@ -8,11 +8,11 @@ def windows():
 def windows_wss():
     os.system('python BSCTokenSniper_wss.py')
     
-def linux_wss():
+def linux():
     os.system('python BSCTokenSniper_Linux.py')
  
 
-def wss():
+def linux_wss():
     os.system('python BSCTokenSniper_Linux_wss.py')
 
     
