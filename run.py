@@ -5,7 +5,7 @@ import os
 def windows():
     os.system('python BSCTokenSniper.py')
 
-def window_wss():
+def windows_wss():
     os.system('python BSCTokenSniper_wss.py')
     
 def linux_wss():
