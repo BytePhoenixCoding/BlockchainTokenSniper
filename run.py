@@ -70,10 +70,10 @@ elif int(choose) == 2:
     print("Runing on Linux")
     linux()
 elif int(choose) == 3:
-    print("Runing on linux websocket version")
+    print("Runing on Linux websocket version")
     linux_wss()
 elif int(choose) == 4:
-    print("Runing on linux websocket version")
+    print("Runing on Windows websocket version")
     windows_wss()
 elif int(choose) == 5:
     print("Installing Dependency")
