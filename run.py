@@ -5,8 +5,10 @@ import os
 def windows():
     os.system('python BSCTokenSniper.py')
 
-
-def linux():
+def window_wss():
+    os.system('python BSCTokenSniper_wss.py')
+    
+def linux_wss():
     os.system('python BSCTokenSniper_Linux.py')
  
 
@@ -16,6 +18,7 @@ def wss():
     
 def installdep():
     os.system('python -m pip install -r requirements.txt')
+    os.system('python -m pip install -U web3')
     os.system('python run.py')
 
 
@@ -37,10 +40,14 @@ def print_msg_box(msg, indent=1, width=None, title=None):
 
 
 # ---------------------
-msg = "1. Windows \n" \
+
+msg = "# Http Version # \n " \
+      "1. Windows \n" \
       "2. Linux \n" \
-      "3. Linux websocket \n" \
-      "4. Install Dependency"
+      "# Websocket version (Recomended) # \n " \
+      "3. Linux Websocket \n" \
+      "4. Windows Websocket \n" \
+      "5. Install Dependency"
 
 print_msg_box(msg=msg, indent=2, title='BSC TOKEN SNIPER')
 
@@ -63,7 +70,10 @@ elif int(choose) == 2:
     linux()
 elif int(choose) == 3:
     print("Runing on linux websocket version")
-    wss()
+    linux_wss()
 elif int(choose) == 4:
+    print("Runing on linux websocket version")
+    windows_wss()
+elif int(choose) == 5:
     print("Installing Dependency")
     installdep()
