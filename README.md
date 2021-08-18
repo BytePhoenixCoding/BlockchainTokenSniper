@@ -26,7 +26,7 @@ The bot does not incur any additional fees, only fees are BSC network transactio
 Prerequisites
 - Python 3 or later installed
 - Node.js installed (easiest way) – Install windows version from https://nodejs.org/en/download/
-- Web3 installed (in windows command line type: npm install Web3)
+- Web3 installed (in windows command line type: pip install web3)
 - BscScan API key (completely free of charge, create an account on BscScan and generate a free API key)
 - BSC wallet address and private key
 - enough BNB in your wallet to snipe tokens.
