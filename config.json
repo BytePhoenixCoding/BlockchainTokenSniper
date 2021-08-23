@@ -12,6 +12,6 @@
    "checkValidPancakeV2": "False",
    "checkMintFunction": "True",
    "checkHoneypot": "True",
-   "checkPancakeV1Router": "True"
-   "checksolidity4": "True"
+   "checkPancakeV1Router": "True",
+   "checksolidity4": "True"      
 }
