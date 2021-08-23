@@ -5,6 +5,8 @@ BSCTokenSniper is a bot written in Python to detect new PairCreated events in th
 
 #Update
 
+
+
 - Some user facing error when run this bot on Linux or MacOS, the error is because ctypes windll which is for windows. And there minor update to run in linux version. And runing perfectly.
 
 - added run.py to make it simple for you. there 3 option you can run, 
@@ -32,6 +34,7 @@ The aim of BSC Token Sniper is to buy new tokens with a specified amount of BNB,
 -	If a mint function exists
 -	If it is a potential honeypot
 -	PancakeSwap v1 router address is not being used.
+-	check for solidity4 [credit](https://github.com/BytePhoenixData/BSCTokenSniper/issues/11#issuecomment-901779866)
 
 The user can decide whether to enable the mini audit or turn it off (bear in mind you will likely be investing in a lot of scams if you don’t).
 Once the token has/hasn't been through a mini audit the bot will then attempt to buy X amount of tokens with the specified amount of BNB.
