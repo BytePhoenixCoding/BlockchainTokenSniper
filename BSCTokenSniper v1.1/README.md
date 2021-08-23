@@ -1,3 +1,5 @@
+# V1.1 of BSCTokenSniper is largely untested. Please try it out and let me know if there's any issues. Thanks!
+
 BSCTokenSniper v1.1 has been released. Not much, just a few improvements.
 
 Improvements:
