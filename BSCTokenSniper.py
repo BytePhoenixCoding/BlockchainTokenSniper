@@ -91,10 +91,11 @@ checkValidPancakeV2 = obj['checkValidPancakeV2']
 checkMintFunction = obj['checkMintFunction']
 checkHoneypot = obj['checkHoneypot']
 checkPancakeV1Router = obj['checkPancakeV1Router']
+checksolidity4 = obj['checksolidity4']
 
 enableMiniAudit = False
 
-if checkSourceCode == "True" and (checkValidPancakeV2 == "True" or checkMintFunction == "True" or checkHoneypot == "True" or checkPancakeV1Router == "True"):
+if checkSourceCode == "True" and (checkValidPancakeV2 == "True" or checkMintFunction == "True" or checkHoneypot == "True" or checkPancakeV1Router == "True" or checksolidity4 == 'True'):
     enableMiniAudit = True
 
 def updateTitle():
@@ -223,6 +224,11 @@ def foundToken(event):
 
                 elif ("function transferFrom(address sender, address recipient, uint256 amount) public override returns (bool)" in str(tokenContractCode['result'][0]['SourceCode']) or "function _approve(address owner, address spender, uint256 amount) internal" in str(tokenContractCode['result'][0]['SourceCode']) or "newun" in str(tokenContractCode['result'][0]['SourceCode'])) and checkHoneypot == "True": #check if token is honeypot
                     print(style.RED + "[FAIL] Contract is a honeypot.")
+
+                elif ("0.4." in str(tokenContractCode['result'][0]['SourceCode'])) or "0.5." in str(
+                        tokenContractCode['result'][0][
+                            'SourceCode']) and checksolidity4 == "True":  # check if solidity is 4.xx
+                    print(style.RED + "[FAIL] Contract uses wrong solidity.")
 
                 else:
                     print(style.GREEN + "[SUCCESS] Token has passed mini audit.") #now you can buy
