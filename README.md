@@ -1,3 +1,5 @@
+! Please bear in mind I as the developer have alot of stuff to do at the moment, and have neglected this project a bit. I am however getting back into it !
+
 # BSCTokenSniper v1.0
 A bot written in Python to automatically buy tokens on the Binance Smart Chain as soon as liquidity is provided.
 
