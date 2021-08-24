@@ -27,7 +27,7 @@ A bot written in Python to automatically buy tokens on the Binance Smart Chain a
 
 BSCTokenSniper is a bot written in Python to detect new PairCreated events in the Binance Smart Chain (when a liquidity pair has been created) and buy the token. It is quite reliable and works well but it is the first version, so if you find any problems/improvements/suggestions please let me know by raising an issue.
 
-Description
+# Description
 
 The aim of BSC Token Sniper is to buy new tokens with a specified amount of BNB, with the aim of the price rising Once the bot detects a PairCreated event, it is able to check the token (mini audit).
 
@@ -47,7 +47,8 @@ The bot buys the tokens using the user's wallet address and private key. This in
 
 The bot does not incur any additional fees, only fees are BSC network transaction fees and PancakeSwap fees.
 
-Prerequisites
+# Prerequisites
+
 - Python 3 or later installed
 - Node.js installed (easiest way) – Install windows version from https://nodejs.org/en/download/
 - Web3 installed (in windows command line type: npm install Web3)
@@ -55,14 +56,15 @@ Prerequisites
 - BSC wallet address and private key
 - enough BNB in your wallet to snipe tokens.
 
-Setup
+# Setup
+
 1)	Install all dependencies (above)
 2)	Edit config.json file with your wallet address, private key and BscScan API key.
 3)	(Optional) if you are in windows, open the command prompt and right-click the title bar, click ‘properties’ and set screen buffer size height to 2500. This allows you to scroll through the history of your token snipes.
 4)	In command prompt (assuming you are using windows) type 'python' and press enter, and check that it is recognized by the computer. If you get a message that says it isn't recognized, then change the 'launchBSCTokenSniper.bat' file and replace 'python' with the path to your python program's executable file (make sure the filepath is in "" quotes).
 5)	Run ‘launchBSCTokenSniper.bat’ and you’re good to go!
 
-Configuration File
+# Configuration File
 
 When you download the bot, you will find a config.json file. This is where you need to add the following data.
 
@@ -75,7 +77,7 @@ gasPrice:  max price of gas to use per transaction. Recommended to leave at defa
 bscScanAPIKey: Your API key from BscScan.
 observeOnly: enabling this will disable buying of coins but allows you to observe how the bot audits tokens. Recommended to try this at the start to make sure the bot can scan for new tokens.
 
-Mini audit
+# Mini audit
 
 The bot has an optional mini audit feature which aims to filter some of the scam coins (eg. wrongly configured, honeypots). Obviously, this is not going to be as good as a proper audit (eg. CertiK) but at least the coins the bot will buy will be higher quality and if you enable the options, you should be able to sell the tokens later on (provided it hasn’t been rugged).
 
@@ -92,7 +94,7 @@ checkPancakeV1Router: checks to see if the PancakeSwap v1 router address is used
 
 Note: be very careful when editing config.json and make sure to not alter the syntax. For mini audit options, either use “True” or “False” making sure to capitalise the 1st letter. Any other spelling will not work.
 
-Things to note
+# Things to note
 
 -	Do not worry if you are not seeing any new tokens being detected. There are often around 10-20 new tokens being created per minute but that can vary quite a lot. Sometimes no new tokens may be detected for a few minutes.
 
@@ -103,7 +105,7 @@ Things to note
 -	To launch the bot, run the ‘launchBSCTokenSniper.bat’. The bot should then open in a cmd window and load.
 -	Don’t left click in the cmd window as it will enable select mode and stop the output (you will see ‘Select’ in the title). If this happens right click your mouse to deselect it. 
 
-FAQs
+# FAQs
 
 I've sniped loads of coins - but how can I check which ones have made a profit?
 -	For this go to poocoin.app, click 'Wallet' and connect your Web3 wallet that you are using for your bot (eg. Metamask).
@@ -120,7 +122,7 @@ Either:
 The bot isn’t sniping that fast (eg. couple seconds between detection and buying)
 - This is mainly due to internet speed and computer processing power. 
 
-Risks:
+# Risks:
 
 Investing in BSC tokens / shitcoins is risky and be aware you could lose all your money. For this reason, do not invest more money than you are prepared to lose.
 It is pretty much impossible to snipe bots very early and be sure it isn’t a rug pull. When people create tokens in most situations, they will manually create liquidity in PancakeSwap. This is when the bot will detect the token. If they burn / lock liquidity, they will then usually send their LP tokens manually to a deadcoin address or put them in a liquidity locker. Therefore, you can’t immediately snipe the tokens with 100% certainty they aren’t rugpulls.
@@ -128,23 +130,37 @@ It is pretty much impossible to snipe bots very early and be sure it isn’t a r
 The mini audit feature can’t be 100% accurate but aims to filter out the majority of scams / hacks and reduce the chance of losing your money.
 If a programmer creates token code in a unique way, they may be able to bypass detection although this is generally quite rare, as the majority of tokens are forks of big projects with very little of the code having been changed e.g., Safemoon.
 
-Things to do / improve / bug fixes / thoughts:
+# Things to do / improve / fix:
 
 - Clarify installation of web3 as alot of users had issues with it
-- Improve honeypot detection (at the moment it is very simple and some tokens are rewriting their code to bypass the bot's detection), I have contacted bscheck.eu via twitter so hopefully they'll respond.
+ 
+- Improve honeypot detection (at the moment it is very simple and some tokens are rewriting their code to bypass the bot's detection), I have contacted bscheck.eu via twitter but they won't share their source code and admit their site is not always 100% correct.
+ 
 - Improve reliability (occasionally it can freeze)
-- Use WebsocketProvider instead of HTTPProvider (faster so will snipe tokens quicker)
-- Implement a feature that makes the bot only invest in tokens that have a certain amount of liquidity (ie. only invest in tokens that have min. 10 BNB liquidity)
-- Implement a GUI? Maybe
-- Look into rugpull detection
-- Auto sell after certain profit reached?
-- Make ETHTokenSniper that does the exact same but runs on the ethereum blockchain
-- Make code more efficient so can run faster and snipe faster
-- Are all tokens that haven't verified their source code bad? Probably not. But I'm currently just assuming that developers will verify their source code before adding liquidity. I can't tell if it's a scam or not if the source code isn't verified.
-- Ignore tokens that are called 'test'.
-- Make an option to snipe a specific token. The contract address of the token is provided, and as soon as liquidity is provided the bot instantly buys the token with a specified amount of BNB. Also maybe an option to sell it at a certain price point. Look what happened to Refinable, a bot bought a huge chunk of the tokens and made an insane amount of money in a few minutes.
 
-If you’ve found this bot useful and have profited from it please consider donating any token to my BSC wallet address: 0xE75470B9a7c93038195ca116E342c42F6B3F758b
+- Use WebsocketProvider instead of HTTPProvider (faster so will snipe tokens quicker)
+ 
+- Implement a feature that makes the bot only invest in tokens that have a certain amount of liquidity (ie. only invest in tokens that have min. 10 BNB liquidity)
+ 
+- Implement a GUI? Maybe
+ 
+- Look into rugpull detection
+ 
+- Auto sell after certain profit reached?
+ 
+- Make ETHTokenSniper that does the exact same but runs on the ethereum blockchain
+ 
+- Make code more efficient so can run faster and snipe faster.
+ 
+- Are all tokens that haven't verified their source code bad? Probably not. But I'm currently just assuming that developers will verify their source code before adding liquidity. I can't tell if it's a scam or not if the source code isn't verified.
+ 
+- Ignore tokens that are called 'test'. ✓
+ 
+- Make an option to snipe a specific token. The contract address of the token is provided, and as soon as liquidity is provided the bot instantly buys the token with a specified amount of BNB. ✓
+ 
+- Also maybe an option to sell it at a certain price point. Look what happened to Refinable, a bot bought a huge chunk of the tokens and made an insane amount of money in a few minutes.
+
+# If you’ve found this bot useful and have profited from it please consider donating any token to my BSC wallet address: 0xE75470B9a7c93038195ca116E342c42F6B3F758b
 
 
 
