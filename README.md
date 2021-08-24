@@ -1,3 +1,5 @@
+TELEGRAM GROUP: https://t.me/joinchat/LivGs7b26iBkNWE0 - please join to assist in development, ask questions, share any successes etc.
+
 # BSCTokenSniper v1.1
 
 Just a few improvements, but largely untested. Would greatly appreciate if you could give me feedback. Thanks!
