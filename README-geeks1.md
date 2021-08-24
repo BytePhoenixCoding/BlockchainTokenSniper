@@ -1,4 +1,30 @@
 # BSCTokenSniper v1.1
+
+Just a few improvements, but largely untested. Would greatly appreciate if you could give me feedback. Thanks!
+
+Improvements:
+
+- Added 'check for test' to ignore tokens which have 'test' in their name.
+
+- Added 'try' and 'catch' clauses for buy token and listenForTokens function to avoid exiting with error
+
+- Added function to detect WBNB pair in either pair 1 or pair 2 (currently only detects WBNB in pair 1 which potentially ignores alot of tokens)
+
+- Created 'SpecifiedTokenSniper' script - this allows you to snipe a specific token at launch as soon as it gains liquidity, if you know the token address. 
+If you're lucky (like the refinable bot) you could make huge amounts of money.
+
+- You can now pick what liquidity pair address you would like. It is set to WBNB by default (recommended) but you can change to anything if you wish.
+
+New config.json entries:
+
+- "checkForTest": choose whether "test" is in the token's name. Only enable if checkSourceCode is enabled. Recommended.
+
+- "liquidityPairAddress": Leave it unless you want to change the liquidity pair address.
+
+
+# BSCTokenSniper v1.0
+
+
 A bot written in Python to automatically buy tokens on the Binance Smart Chain as soon as liquidity is provided.
 
 BSCTokenSniper is a bot written in Python to detect new PairCreated events in the Binance Smart Chain (when a liquidity pair has been created) and buy the token. It is quite reliable and works well but it is the first version, so if you find any problems/improvements/suggestions please let me know by raising an issue.
@@ -135,7 +161,7 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 Things to do / improve / bug fixes / thoughts:
 
 - Clarify installation of web3 as alot of users had issues with it
-- Improve honeypot detection (at the moment it is very simple and some tokens are rewriting their code to bypass the bot's detection) (bscheck.eu seem to do a good job of detecting honeypots better than the bot can do, will try to contact them and see how their detection algorithm works)
+- Improve honeypot detection (at the moment it is very simple and some tokens are rewriting their code to bypass the bot's detection), I have contacted bscheck.eu via twitter so hopefully they'll respond.
 - Improve reliability (occasionally it can freeze)
 - Use WebsocketProvider instead of HTTPProvider (faster so will snipe tokens quicker)
 - Implement a feature that makes the bot only invest in tokens that have a certain amount of liquidity (ie. only invest in tokens that have min. 10 BNB liquidity)
