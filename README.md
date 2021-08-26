@@ -16,6 +16,8 @@ Improvements:
 
 - Some bits of code tidied up
 
+* SpecifiedTokenSniper is not updated and still in v1.1 folder, will be integrated in main program and in GUI in future *
+
 Also massive thanks to Christiaan Van AS, Muhammed Nurhaqqin and everyone else on Telegram for development and support with this project.
 
 # BSCTokenSniper v1.1
