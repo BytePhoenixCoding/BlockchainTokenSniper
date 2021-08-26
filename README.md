@@ -14,6 +14,8 @@ Improvements:
 
 - you can now change websocketprovider node in config.json instead of being in code
 
+- some bits of code tidied up
+
 Also massive thanks to Christiaan Van AS and Muhammed Nurhaqqin and everyone else on Telegram for development and helping with this project.
 
 # BSCTokenSniper v1.1
