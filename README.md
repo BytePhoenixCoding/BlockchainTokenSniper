@@ -10,11 +10,11 @@ Improvements:
 
 - Fixed issue with buy - saying transaction failed when it was fine
 
-- changed to websocketprovider instead of httpprovider - alot more reliable and also faster, should be less crashing as well
+- Changed to websocketprovider instead of httpprovider - alot more reliable and also faster, should be less crashing as well
 
-- you can now change websocketprovider node in config.json instead of being in code
+- You can now change websocketprovider node in config.json instead of being in code
 
-- some bits of code tidied up
+- Some bits of code tidied up
 
 Also massive thanks to Christiaan Van AS, Muhammed Nurhaqqin and everyone else on Telegram for development and support with this project.
 
