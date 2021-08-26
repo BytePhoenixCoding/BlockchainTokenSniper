@@ -157,14 +157,7 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 - Clarify installation of web3 as alot of users had issues with it
  
 - Improve honeypot detection (at the moment it is very simple and some tokens are rewriting their code to bypass the bot's detection), I have contacted bscheck.eu via twitter but they won't share their source code and admit their site is not always 100% correct.
- 
-- Improve reliability (occasionally it can freeze)
 
-- Use WebsocketProvider instead of HTTPProvider (faster so will snipe tokens quicker)
- 
-- Implement a feature that makes the bot only invest in tokens that have a certain amount of liquidity (ie. only invest in tokens that have min. 10 BNB liquidity)
- 
-- Implement a GUI? Maybe
  
 - Look into rugpull detection
  
@@ -172,15 +165,9 @@ If a programmer creates token code in a unique way, they may be able to bypass d
  
 - Make ETHTokenSniper that does the exact same but runs on the ethereum blockchain
  
-- Make code more efficient so can run faster and snipe faster.
- 
 - Are all tokens that haven't verified their source code bad? Probably not. But I'm currently just assuming that developers will verify their source code before adding liquidity. I can't tell if it's a scam or not if the source code isn't verified.
  
-- Ignore tokens that are called 'test'. ✓
- 
-- Make an option to snipe a specific token. The contract address of the token is provided, and as soon as liquidity is provided the bot instantly buys the token with a specified amount of BNB. ✓
- 
-- Also maybe an option to sell it at a certain price point. Look what happened to Refinable, a bot bought a huge chunk of the tokens and made an insane amount of money in a few minutes.
+ - Also maybe an option to sell it at a certain price point. Look what happened to Refinable, a bot bought a huge chunk of the tokens and made an insane amount of money in a few minutes.
 
 # If you’ve found this bot useful and have profited from it please consider donating any token to my BSC wallet address: 0xE75470B9a7c93038195ca116E342c42F6B3F758b
 
