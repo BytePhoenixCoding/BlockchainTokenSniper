@@ -1,5 +1,21 @@
 TELEGRAM GROUP: https://t.me/joinchat/LivGs7b26iBkNWE0 - please join to assist in development, ask questions, share any successes etc.
 
+# BSCTokenSniper v1.2 Beta
+
+Improvements:
+
+- Added code blacklist (code_exceptions.txt): the program will ignore any program with code that is in this file
+
+- Added min liquidity checker (won't buy token unless it has certain amount of liquidity) - edit threshold in config.json
+
+- Fixed issue with buy - saying transaction failed when it was fine
+
+- changed to websocketprovider instead of httpprovider - alot more reliable and also faster, should be less crashing as well
+
+- you can now change websocketprovider node in config.json instead of being in code
+
+Also massive thanks to Christiaan Van AS and Muhammed Nurhaqqin and everyone else on Telegram for development and helping with this project.
+
 # BSCTokenSniper v1.1
 
 Just a few improvements, but largely untested. Would greatly appreciate if you could give me feedback. Thanks!
