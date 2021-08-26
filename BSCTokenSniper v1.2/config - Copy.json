@@ -1,0 +1,20 @@
+{
+   "walletAddress": "Enter wallet address here",
+   "walletPrivateKey": "Enter private key here",
+   "pancakeSwapRouterAddress": "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+   "amountToSpendPerSnipe": "0.00025",
+   "transactionRevertTimeSeconds": "10000",
+   "gasAmount": "200000",
+   "gasPrice": "5",
+   "bscNode": "wss://bsc-ws-node.nariox.org:443",
+   "bscScanAPIKey": "Enter bscscan api key here",
+   "observeOnly": "False",
+   "checkSourceCode": "True",
+   "checkValidPancakeV2": "True",
+   "checkMintFunction": "True",
+   "checkHoneypot": "True",
+   "checkPancakeV1Router": "True",
+   "checkForTest": "True",
+   "liquidityPairAddress": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+   "minLiquidityAmount": "0.1"
+}
