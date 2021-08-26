@@ -171,6 +171,8 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 
 # If you’ve found this bot useful and have profited from it please consider donating any token to my BSC wallet address: 0xE75470B9a7c93038195ca116E342c42F6B3F758b
 
+# Also consider donating to our other developers: 0x3a5A12dfffD327AFdaC7BEA60ECF7A48410E873a (Christian Van AS)
+
 
 
 
