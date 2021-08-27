@@ -9,7 +9,7 @@ import requests
 import time
 import os
 import sys
-import ctypes
+#import ctypes
 
 os.system("mode con: lines=32766")
 os.system("") #allows different colour text to be used
@@ -37,7 +37,8 @@ print(" ╚═════╝ ╚══════╝ ╚═════╝    
 
 print(style.WHITE)
 
-ctypes.windll.kernel32.SetConsoleTitleW("BSCTokenSniper | Loading...")
+sys.stdout.write("BSCTokenSniper | Loading...")
+sys.stdout.flush()
 
 currentTimeStamp = ""
 def getTimestamp():
@@ -62,7 +63,7 @@ walletBalance = 0
     
 #load json data
 
-configFilePath = os.path.abspath('') + '\config.json'
+configFilePath = os.path.abspath('') + '/config.json'
 
 with open(configFilePath, 'r') as configdata:
     data=configdata.read()
@@ -108,8 +109,8 @@ if checkSourceCode == "True" and (checkValidPancakeV2 == "True" or checkMintFunc
 def updateTitle():
     walletBalance = web3.fromWei(web3.eth.get_balance(walletAddress),'ether') #There are references to ether in the code but it's set to BNB, its just how Web3 was originally designed
     walletBalance = round(walletBalance, -(int("{:e}".format(walletBalance).split('e')[1]) - 4)) #the number '4' is the wallet balance significant figures + 1, so shows 5 sig figs
-    ctypes.windll.kernel32.SetConsoleTitleW("BSCTokenSniper | Tokens Detected: " + str(numTokensDetected) + " | Tokens Bought: " + str(numTokensBought) + " | Wallet Balance: " + str(walletBalance) + " BNB")
-
+    sys.stdout.write("BSCTokenSniper | Tokens Detected: " + str(numTokensDetected) + " | Tokens Bought: " + str(numTokensBought) + " | Wallet Balance: " + str(walletBalance) + " BNB")
+    sys.stdout.flush()
 updateTitle()
 
 
