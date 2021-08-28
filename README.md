@@ -1,5 +1,7 @@
 TELEGRAM GROUP: https://t.me/joinchat/LivGs7b26iBkNWE0 - please join to assist in development, ask questions, share any successes etc.
 
+BSCTokenSniper v1.3 in development and will be released in next few days.
+
 # BSCTokenSniper v1.2 Beta
 
 Improvements:
@@ -80,11 +82,75 @@ The bot does not incur any additional fees, only fees are BSC network transactio
 
 # Setup
 
-1)	Install all dependencies (above)
-2)	Edit config.json file with your wallet address, private key and BscScan API key.
-3)	(Optional) if you are in windows, open the command prompt and right-click the title bar, click ‘properties’ and set screen buffer size height to 2500. This allows you to scroll through the history of your token snipes.
-4)	In command prompt (assuming you are using windows) type 'python' and press enter, and check that it is recognized by the computer. If you get a message that says it isn't recognized, then change the 'launchBSCTokenSniper.bat' file and replace 'python' with the path to your python program's executable file (make sure the filepath is in "" quotes).
-5)	Run ‘launchBSCTokenSniper.bat’ and you’re good to go!
+ ## Supported OS's
+  1. Windows
+  2. Linux 
+  3. Mac 
+  4.  Android 
+
+  # **INSTALLATION**
+
+
+## Windows
+
+   1. Download git [Git](https://git-scm.com/)
+   2. Download python [Python](https://www.python.org/)
+   3. Clone the repo: 
+   - `git clone https://github.com/BytePhoenixData/BSCTokenSniper.git`
+   4. Go to repo directory
+   - run `cd BSCTokenSniper`
+   6. Install Web3:
+   - `pip install web3`
+   If you facing an error during the web3 installation, you may need the following microsoft visual studio build tool.
+   use this [link](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
+   
+   ## Linux User
+   
+  Install package With `sudo`
+Debian / Ubuntu : 
+ 1. install all dependency using command below.
+   ` apt install git && apt install python3-pip && pip install web3 ` 
+2. Clone repository and install web3
+	    `git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper && pip install web3`
+
+Fedora Linux / Centos
+ 1. install all dependency using command below.
+   ` dnf git && dnf install python3-pip && pip install web3 ` 
+2. Clone repository and install web3
+	    `git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper && pip install web3`
+
+Arch Linux
+ 1. install all dependency using command below.
+   ` pacman -S git && pacman -S install python3-pip && pip install web3 ` 
+2. Clone repository and install web3
+	    `git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper && pip install web3`
+- If you all find the error try this bellow command and may fix your problem.
+`pip uninstall web3 && pip install web3`
+or
+`pip install -U web3`
+
+## Android
+  1. Install Termux [Link](https://play.google.com/store/apps/details?id=com.termux&hl=en&gl=US)
+  2. Update
+   `pkg update && pkg upgrade`
+   3. Install dependency
+    `pkg install git python3 python3-pip`
+	4. Install web3 
+    `pip install web3`
+	`pip install -U web3`
+	5. Clone the repo using git
+	`git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper`
+
+Note:
+You may find an error when installing web3 in android. You should install dependency needed by web3 manually using pip.
+The web3 version that work for this bot is web3 5.x.x if your web3 is 3.x.x the bot will not work.
+ 
+## Run python script
+
+Assuming you are in BSCTokenSniper Directory.
+run `python3 BSCTokenSniper.py`
+To use other version you need to go to the directory needed and run the python script.
+
 
 # Configuration File
 
@@ -96,15 +162,18 @@ amountToSpendPerSnipe: The amount in BNB you want your wallet to spend on every 
 transactionRevertTimeSeconds: Time to spend before transaction reverts. Recommended to leave at default.
 gasAmount: amount of max gas to use per transaction. Recommended to leave at default.
 gasPrice:  max price of gas to use per transaction. Recommended to leave at default.
+bscNode: Address for custom BSC node. Recommended to leave at default.
 bscScanAPIKey: Your API key from BscScan.
-observeOnly: enabling this will disable buying of coins but allows you to observe how the bot audits tokens. Recommended to try this at the start to make sure the bot can scan for new tokens.
+liquidityPairAddress: Address for liquidity pairs. Recommended to leave at default.
+minLiquidityAmount: The minimum amount of liquidity in BNB in a token that the bot will purchase. The bot detects the amount of BNB in a newly detected token, and only buys tokens that have liquidity higher than the amount specified in the config file. Set to -1 to disable.
+observeOnly: enabling this will bypass the mini audit feature which allows you to observe how the bot audits tokens. Recommended to try this at the start to make sure the bot can scan for new tokens.
 
 # Mini audit
 
 The bot has an optional mini audit feature which aims to filter some of the scam coins (eg. wrongly configured, honeypots). Obviously, this is not going to be as good as a proper audit (eg. CertiK) but at least the coins the bot will buy will be higher quality and if you enable the options, you should be able to sell the tokens later on (provided it hasn’t been rugged).
 
 The following json entries are for mini audit. Set all to false to disable mini audits, although beware you will probably be buying a lot of scam coins.
-checkSourceCode: checks if source code is verified. This function is needed for all the other functions so if you disable this be sure to disable all the other audit options. Recommended.
+checkSourceCode: checks if source code is verified. This function is needed for all the other functions so if you disable this be sure to disable all the other audit options. Recommended. v1.3 onwards will use RugDoc tool to check for honeypots and high fee tokens.
 
 checkValidPancakeV2: checks if the correct PancakeSwap v2 router address is used in the code. Be aware some contracts may externally set their router address so this function may reject a potentially good token. Not recommended.
 
@@ -113,6 +182,8 @@ checkMintFunction: checks if a mint function is present in the code. Recommended
 checkHoneypot: checks the code to see if it might be a honeypot (where you can buy tokens but cannot sell). Recommended.
 
 checkPancakeV1Router: checks to see if the PancakeSwap v1 router address is used in the code. You will not be able to sell the tokens later on if PCS v1 router address is used. Highly recommended.
+
+checkForTest: checks for tokens that are named 'test'. Often these tokens don't work or are not an investment opportunity.
 
 Note: be very careful when editing config.json and make sure to not alter the syntax. For mini audit options, either use “True” or “False” making sure to capitalise the 1st letter. Any other spelling will not work.
 
@@ -154,20 +225,19 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 
 # Things to do / improve / fix:
 
-- Clarify installation of web3 as alot of users had issues with it
+ - Look into rugpull detection (in development)
  
-- Improve honeypot detection (at the moment it is very simple and some tokens are rewriting their code to bypass the bot's detection), I have contacted bscheck.eu via twitter but they won't share their source code and admit their site is not always 100% correct.
-
- 
-- Look into rugpull detection
- 
-- Auto sell after certain profit reached?
+- Auto sell after certain profit reached? (in development)
  
 - Make ETHTokenSniper that does the exact same but runs on the ethereum blockchain
  
-- Are all tokens that haven't verified their source code bad? Probably not. But I'm currently just assuming that developers will verify their source code before adding liquidity. I can't tell if it's a scam or not if the source code isn't verified.
+- Are all tokens that haven't verified their source code bad? Probably not. But the bot currently just assumes that developers will verify their source code before adding liquidity. The bot can't tell if it's a scam or not if the source code isn't verified.
  
  - Also maybe an option to sell it at a certain price point. Look what happened to Refinable, a bot bought a huge chunk of the tokens and made an insane amount of money in a few minutes.
+
+- Improve reliability: the program can sometimes unexpectedly freeze. This is being investigated.
+
+- Allow user to set slippage percentage
 
 # If you’ve found this bot useful and have profited from it please consider donating any token to my BSC wallet address: 0xE75470B9a7c93038195ca116E342c42F6B3F758b
 
