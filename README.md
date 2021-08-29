@@ -96,50 +96,76 @@ The bot does not incur any additional fees, only fees are BSC network transactio
    1. Download git [Git](https://git-scm.com/)
    2. Download python [Python](https://www.python.org/)
    3. Clone the repo: 
+
    - `git clone https://github.com/BytePhoenixData/BSCTokenSniper.git`
+
    4. Go to repo directory
+
    - run `cd BSCTokenSniper`
    6. Install Web3:
+
    - `pip install web3`
+
    If you facing an error during the web3 installation, you may need the following microsoft visual studio build tool.
    use this [link](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
    
    ## Linux User
    
   Install package With `sudo`
-Debian / Ubuntu : 
- 1. install all dependency using command below.
-   ` apt install git && apt install python3-pip && pip install web3 ` 
+Debian / Ubuntu: 
+1. install all dependency using command below.
+
+`apt install git && apt install python3-pip && pip install web3` 
+
 2. Clone repository and install web3
-	    `git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper && pip install web3`
+
+`git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper && pip install web3`
 
 Fedora Linux / Centos
  1. install all dependency using command below.
-   ` dnf git && dnf install python3-pip && pip install web3 ` 
+
+` dnf git && dnf install python3-pip && pip install web3 ` 
+
 2. Clone repository and install web3
-	    `git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper && pip install web3`
+
+`git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper && pip install web3`
 
 Arch Linux
  1. install all dependency using command below.
-   ` pacman -S git && pacman -S install python3-pip && pip install web3 ` 
+
+ ` pacman -S git && pacman -S install python3-pip && pip install web3 ` 
+
 2. Clone repository and install web3
-	    `git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper && pip install web3`
+
+`git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper && pip install web3`
+
 - If you all find the error try this bellow command and may fix your problem.
+
 `pip uninstall web3 && pip install web3`
+
 or
+
 `pip install -U web3`
 
 ## Android
   1. Install Termux [Link](https://play.google.com/store/apps/details?id=com.termux&hl=en&gl=US)
   2. Update
-   `pkg update && pkg upgrade`
+
+  `pkg update && pkg upgrade`
+
    3. Install dependency
-    `pkg install git python3 python3-pip`
-	4. Install web3 
-    `pip install web3`
-	`pip install -U web3`
-	5. Clone the repo using git
-	`git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper`
+
+`pkg install git python3 python3-pip`
+
+   4. Install web3 
+
+`pip install web3`
+
+`pip install -U web3`
+
+   5. Clone the repo using git
+
+`git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSniper`
 
 Note:
 You may find an error when installing web3 in android. You should install dependency needed by web3 manually using pip.
