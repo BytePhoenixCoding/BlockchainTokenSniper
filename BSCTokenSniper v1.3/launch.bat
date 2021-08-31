@@ -1,0 +1,1 @@
+python BSCTokenSniper.pyc
