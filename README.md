@@ -2,7 +2,34 @@ TELEGRAM GROUP: https://t.me/joinchat/LivGs7b26iBkNWE0 - please join to assist i
 
 BSCTokenSniper v1.3 in development and will be released in next few days.
 
-# BSCTokenSniper v1.2 Beta
+# BSCTokenSniper v1.3 Beta - this still has bugs in it but should mostly work
+
+# This version still needs changes and improvements in it, it is still unfinished. More documentation coming shortly
+
+Improvements:
+
+- Can queue a token if 2 are detected (rare but can happen)
+
+- PCS factory address now editable from config.json
+
+- detects if pancakeswaprouteraddress is in code more accurately (previously would ignore if text was different upper or lower case from config file)
+
+- Users are now warned if config.json file is incorrectly configured and program exits.
+
+- program automatically detects whether os is windows or not and applies appropriate title code (same script should work universally on any os with python)
+
+- rugdoc API integrated. This will reject tokens that are dodgy, have high fees (over 10%) and honeypots.
+
+- antibot delay implemented. This allows you to delay purchase for x amount of seconds specified in config file, as some bots will have a very high tax in the first
+few blocks
+
+- prevents tokens being bought that are same as previous
+
+- autosell feature now working (STILL GOT ISSUES WITH IT - SOMETIMES GIVES ERRORS)
+
+- some bits of code tidied up
+
+# BSCTokenSniper v1.2
 
 Improvements:
 
