@@ -497,7 +497,7 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 | Dev | BSC Address |
 |:---:|:---:|
 | BytePhoenixData | 0xE75470B9a7c93038195ca116E342c42F6B3F758b |
-| Christian Van AS | 0x3a5A12dfffD327AFdaC7BEA60ECF7A48410E873a |
+| CVA_CryptoPlayground | 0x3a5A12dfffD327AFdaC7BEA60ECF7A48410E873a |
 | Geeks121 | 0xbeeF1858CBDdb48319893b028bE9D914d45f51D9 |
 
 
