@@ -42,7 +42,7 @@
   <h3 align="center">BSCTokenSniper Python</h3>
 
   <p align="center">
-    Awesome Sniper to get you early token!
+    An sniper bot written in Python to buy tokens as soon as liquidity is added and to sell on later when the price increases.
     <br />
     <a href="https://github.com/BytePhoenixData/BSCTokenSniper/"><strong>Explore the docs »</strong></a>
     <br />
@@ -61,7 +61,7 @@
 
 <!-- Snipe the shit -->
 <details open="open">
-  <summary>Snipe The shitcoin</summary>
+  <summary>Contents</summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -108,16 +108,14 @@
 
 <!--[![Product Name Screen Shot][product-screenshot]](https://example.com)-->
 
-The aim of BSC Token Sniper is to buy new tokens with a specified amount of BNB, with the aim of the price rising Once the bot detects a PairCreated event, it is able to check the token (mini audit).
+The aim of BSC Token Sniper is to buy new tokens with a specified amount of BNB, with the aim of the price rising. Once the bot detects a PairCreated event, it is able to check the token (mini audit). It then later sells the token when the price is high enough.
 
  It can check if:
--	Source code is verified.
--	If valid PancakeSwap v2 router is being used 
--	If a mint function exists
--	If it is a potential honeypot
--	PancakeSwap v1 router address is not being used.
+-	Token's source code is verified.
+- Token is a honeypot
+- Token is a test
 
-The user can decide whether to enable the mini audit or turn it off (bear in mind you will likely be investing in a lot of scams if you don’t).
+The user can decide whether to enable the mini audit or turn it off (bear in mind you will likely be investing in a lot of scams / rugpulls / honeypots if you don’t).
 Once the token has/hasn't been through a mini audit the bot will then attempt to buy X amount of tokens with the specified amount of BNB.
 The bot will buy the tokens directly through the Binance Smart Chain using the PancakeSwap v2 router and factory address, so it is much quicker than the PancakeSwap web interface.
 
@@ -139,7 +137,7 @@ This Project Build with.
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
@@ -150,11 +148,11 @@ To get a local copy up and running follow these simple example steps.
 
 ### Operating System
 
-The list os you can run this bot.
+The bot can be run on the following OS's:
   1.  Windows
   2.  Linux 
   3.  Mac 
-  4.  Android (Hard to install web3) 
+  4.  Android (more advanced) 
 
 ## Installation
 
@@ -191,7 +189,7 @@ The list os you can run this bot.
   sudo
   ```
 Debian / Ubuntu: 
-1. install all dependency using command below.
+1. install all dependencies using command below.
 
 ```sh
 apt install git && apt install python3-pip && pip install web3
@@ -272,12 +270,12 @@ git clone https://github.com/BytePhoenixData/BSCTokenSniper.git && cd BSCTokenSn
 ```
 
 Note:
-You may find an error when installing web3 in android. You should install dependency needed by web3 manually using pip.
-The web3 version that work for this bot is web3 5.x.x if your web3 is 3.x.x the bot will not work.
+You may encounter an error when installing web3 in android. You should install the dependency needed by web3 manually using pip.
+The web3 version that work for this bot is web3 5.x.x, if your web3 is 3.x.x or lower then the bot will not work.
  
 ## Run python script
 
-Assuming you are in BSCTokenSniper Directory.
+Assuming you are in BSCTokenSniper Directory:
 run 
 
 ```sh
@@ -367,8 +365,7 @@ Contributions are what make the open source community such an amazing place to l
 5. Open a Pull Request
 
 ## Version
-Here is the version
-
+Here are the latest versions. v1.4 is being worked on and will be released shortly.
 ### V1.3
 
 #### This version still needs changes and improvements in it, it is still unfinished. More documentation coming shortly
@@ -479,13 +476,7 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 
  - Look into rugpull detection (in development)
  
-- Auto sell after certain profit reached? (in development)
- 
-- Make ETHTokenSniper that does the exact same but runs on the ethereum blockchain
- 
-- Are all tokens that haven't verified their source code bad? Probably not. But the bot currently just assumes that developers will verify their source code before adding liquidity. The bot can't tell if it's a scam or not if the source code isn't verified.
- 
- - Also maybe an option to sell it at a certain price point. Look what happened to Refinable, a bot bought a huge chunk of the tokens and made an insane amount of money in a few minutes.
+- Modify bot to work on different blockchains eg. Ethereum
 
 - Improve reliability: the program can sometimes unexpectedly freeze. This is being investigated.
 
@@ -496,7 +487,7 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 
 | Dev | BSC Address |
 |:---:|:---:|
-| BytePhoenixData | 0xE75470B9a7c93038195ca116E342c42F6B3F758b |
+| BytePhoenix (founder) | 0xE75470B9a7c93038195ca116E342c42F6B3F758b |
 | CVA_CryptoPlayground | 0x3a5A12dfffD327AFdaC7BEA60ECF7A48410E873a |
 | Geeks121 | 0xbeeF1858CBDdb48319893b028bE9D914d45f51D9 |
 
