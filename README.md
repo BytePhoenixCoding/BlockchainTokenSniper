@@ -39,7 +39,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-  <h3 align="center">BSCTokenSniper Python</h3>
+  <h3 align="center">BSCTokenSniper</h3>
 
   <p align="center">
     An sniper bot written in Python to buy tokens as soon as liquidity is added and to sell on later when the price increases.
