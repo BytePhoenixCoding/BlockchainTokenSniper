@@ -42,7 +42,7 @@
   <h3 align="center">BSCTokenSniper</h3>
 
   <p align="center">
-    An sniper bot written in Python to buy tokens as soon as liquidity is added and to sell on later when the price increases.
+    A sniper bot written in Python to buy tokens as soon as liquidity is added and to sell on later when the price increases.
     <br />
     <a href="https://github.com/BytePhoenixData/BSCTokenSniper/"><strong>Explore the docs »</strong></a>
     <br />
@@ -87,11 +87,11 @@
         <a href="#contributing">Contributing</a>
     </li>
     <li>
-      <a href="#version">Version</a>
+      <a href="#version">Versions</a>
       <ul>
-        <li><a href="#v13">V1.3</a></li>
-        <li><a href="#v12">V1.2</a></li>
-        <li><a href="#v11">V1.1</a></li>
+        <li><a href="#v13">v1.3 Beta</a></li>
+        <li><a href="#v12">v1.2</a></li>
+        <li><a href="#v11">v1.1</a></li>
       </ul>
     </li>    
     <li><a href="#risks">Risks</a></li>
