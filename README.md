@@ -64,9 +64,9 @@
   <summary>Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">About the project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Built with</a></li>
       </ul>
     </li>
     <li>
@@ -96,7 +96,7 @@
     </li>    
     <li><a href="#risks">Risks</a></li>
     <li><a href="#faqs">FAQs</a></li>
-    <li><a href="#donation">Donation</a></li>
+    <li><a href="#donations">Donations</a></li>
     <li><a href="#things-to-do--improve--fix">Things to do / improve / fix</a></li>
   
   </ol>
@@ -483,7 +483,9 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 - Allow user to set slippage percentage
 
 
-## Donation
+## Donations
+
+Any donation of any token is massively appreciated.
 
 | Dev | BSC Address |
 |:---:|:---:|
