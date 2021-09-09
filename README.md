@@ -124,6 +124,8 @@ The bot buys the tokens using the user's wallet address and private key. This in
 
 The bot does not incur any additional fees, only fees are BSC network transaction fees and PancakeSwap fees.
 
+From v1.3 onwards, the bot's source code will be heavily obfuscated and compiled to prevent people stealing code as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then these can be transferred to your main wallet.
+
 ### Built With
 
 This Project Build with.
