@@ -53,7 +53,7 @@
     ·
     <a href="https://github.com/BytePhoenixData/BSCTokenSniper/issues">Request Feature</a>
     ·
-    <a href="https://t.me/joinchat/LivGs7b26iBkNWE0">Telegram Group</a>
+    <a href="https://t.me/joinchat/7TtO_mvE90UzYmM0">Telegram Group</a>
   </p>
 </p>
 
