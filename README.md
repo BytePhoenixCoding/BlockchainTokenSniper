@@ -480,7 +480,7 @@ If a programmer creates token code in a unique way, they may be able to bypass d
  
 - Modify bot to work on different blockchains eg. Ethereum
 
-- Improve reliability: the program can sometimes unexpectedly freeze. This is being investigated.
+- Improve reliability: the program can sometimes unexpectedly freeze / quit. This is being investigated.
 
 - Allow user to set slippage percentage
 
