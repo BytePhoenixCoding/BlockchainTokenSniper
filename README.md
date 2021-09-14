@@ -1,3 +1,5 @@
+* BSCTokenSniper v1.4 Beta is available, please check the telegram link for a link to the testing group where you can find the file.
+
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
