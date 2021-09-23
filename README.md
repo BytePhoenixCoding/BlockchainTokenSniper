@@ -495,7 +495,7 @@ Any donation of any token is massively appreciated.
 
 | Dev | BSC Address |
 |:---:|:---:|
-| BytePhoenix (founder) | 0xE75470B9a7c93038195ca116E342c42F6B3F758b |
+| BytePhoenix (founder) | 0x17fC36Fd733D2b2762c020e34E45b5C95723c9b3 |
 | CVA_CryptoPlayground | 0x3a5A12dfffD327AFdaC7BEA60ECF7A48410E873a |
 | Geeks121 | 0xbeeF1858CBDdb48319893b028bE9D914d45f51D9 |
 
