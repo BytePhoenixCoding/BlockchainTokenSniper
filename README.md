@@ -142,7 +142,7 @@ From v1.3 onwards, the bot's source code will be heavily obfuscated and compiled
 
 ### Built With
 
-This Project Build with.
+This project is built with:
 
 * [Python3.9](https://www.python.org/downloads/)
 * [Web3](https://web3py.readthedocs.io/en/stable/)
