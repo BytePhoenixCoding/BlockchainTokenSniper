@@ -2,7 +2,9 @@
 
 * v1.3 and earlier versions are now abandoned in favour of v1.4. The code isn't available on github yet and more testing still needs to be done but it is mostly reliable.
 
-* <font color="red"> Please be aware of this scammer on telegram: @bangyobsc and this group https://t.me/BSCTokensniperofficial - this is a scam and not in any way affiliated with this project. Please leave the group if you have joined and report him. The genuine telegram link is further down in the description. Thanks.  </font>
+ ```diff 
+* - Please be aware of this scammer on telegram: @bangyobsc and this group https://t.me/BSCTokensniperofficial - this is a scam and not in any way affiliated with this project. - Please leave the group if you have joined and report him. The genuine telegram link is further down in the description. Thanks.  </font>
+```
 
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
