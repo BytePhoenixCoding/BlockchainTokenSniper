@@ -490,18 +490,18 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 
 # Things to do / improve / fix
 
- - Look into rugpull detection (in development)
+ - Look into rugpull detection (in development) - unfortunately current there's so many scams on BSC. We are looking for the best way to filter out scams and get the gems
  
-- Modify bot to work on different blockchains eg. Ethereum
+- Modify bot to work on different blockchains eg. Ethereum, Polygon
 
 - Improve reliability: the program can sometimes unexpectedly freeze / quit. This is being investigated.
 
-- Allow user to set slippage percentage
+- Allow user to set slippage percentage - currently bot just selects the best slippage automatically 
 
 
 ## Donations
 
-Any donation of any token is massively appreciated.
+Any donation of any token is massively appreciated and helps alot with the development of the project.
 
 | Dev | BSC Address |
 |:---:|:---:|
