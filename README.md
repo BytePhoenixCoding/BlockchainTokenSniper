@@ -1,5 +1,9 @@
 * BSCTokenSniper v1.4 Beta is available, please check the telegram link for a link to the testing group where you can find the file.
 
+* v1.3 and earlier versions are now abandoned in favour of v1.4. The code isn't available on github yet and more testing still needs to be done but it is mostly reliable.
+
+* Please be aware of this scammer on telegram: @bangyobsc and this group https://t.me/BSCTokensniperofficial - this is a scam and not in any way affiliated with this project. Please leave the group if you have joined and report him. The genuine telegram link is further down in the description. Thanks.
+
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
