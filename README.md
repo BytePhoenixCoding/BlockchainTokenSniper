@@ -1,4 +1,4 @@
-* BSCTokenSniper v1.4 Beta is available, please check the telegram link for a link to the testing group where you can find the file.
+* BSCTokenSniper v1.4 Beta is available, please check the telegram link for a link to the testing group where you can find the zip file.
 
 * v1.3 and earlier versions are now abandoned in favour of v1.4. The code isn't available on github yet and more testing still needs to be done but it is mostly reliable.
 
@@ -130,7 +130,7 @@ The bot buys the tokens using the user's wallet address and private key. This in
 
 The bot does not incur any additional fees, only fees are BSC network transaction fees and PancakeSwap fees.
 
-From v1.3 onwards, the bot's source code will be heavily obfuscated and compiled to prevent people stealing code as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then these can be transferred to your main wallet.
+From v1.3 onwards, the bot's source code will be heavily obfuscated and compiled to prevent people stealing code and scammers trying to bypass this system as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then that can be transferred to your main wallet.
 
 © 2021
 
