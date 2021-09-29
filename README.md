@@ -362,17 +362,17 @@ for V1.3 or latest, you should install Python3.9
 
 When you download the bot, you will find a config.json file. This is where you need to add the following data.
 
-walletAddress: your BSC wallet address (e.g., Metamask)
-walletPrivateKey: your private key of your wallet address (your private key is kept safe and not shared in any other place)
-amountToSpendPerSnipe: The amount in BNB you want your wallet to spend on every new token. (e.g., 0.00025 means a new snipe will spend 0.00025 BNB on the new token)
-transactionRevertTimeSeconds: Time to spend before transaction reverts. Recommended to leave at default.
-gasAmount: amount of max gas to use per transaction. Recommended to leave at default.
-gasPrice:  max price of gas to use per transaction. Recommended to leave at default.
-bscNode: Address for custom BSC node. Recommended to leave at default.
-bscScanAPIKey: Your API key from BscScan.
-liquidityPairAddress: Address for liquidity pairs. Recommended to leave at default.
-minLiquidityAmount: The minimum amount of liquidity in BNB in a token that the bot will purchase. The bot detects the amount of BNB in a newly detected token, and only buys tokens that have liquidity higher than the amount specified in the config file. Set to -1 to disable.
-observeOnly: enabling this will bypass the mini audit feature which allows you to observe how the bot audits tokens. Recommended to try this at the start to make sure the bot can scan for new tokens.
+* walletAddress: your BSC wallet address (e.g., Metamask)
+* walletPrivateKey: your private key of your wallet address (your private key is kept safe and not shared in any other place: DO NOT share with anyone else)
+* amountToSpendPerSnipe: The amount in BNB you want your wallet to spend on every new token. (e.g., 0.00025 means a new snipe will spend 0.00025 BNB on the new token)
+* transactionRevertTimeSeconds: Time to spend before transaction reverts. Recommended to leave at default.
+* gasAmount: amount of max gas to use per transaction. Recommended to leave at default.
+* gasPrice:  max price of gas to use per transaction. Recommended to leave at default.
+* bscNode: Address for custom BSC node. Recommended to leave at default.
+* bscScanAPIKey: Your API key from BscScan.
+* liquidityPairAddress: Address for liquidity pairs. Recommended to leave at default.
+* minLiquidityAmount: The minimum amount of liquidity in BNB in a token that the bot will purchase. The bot detects the amount of BNB in a newly detected token, and only buys * tokens that have liquidity higher than the amount specified in the config file. Set to -1 to disable.
+* observeOnly: enabling this will bypass the mini audit feature which allows you to observe how the bot audits tokens. Recommended to try this at the start to make sure the bot can scan for new tokens.
 
 # Mini audit
 
@@ -397,6 +397,8 @@ Note: be very careful when editing config.json and make sure to not alter the sy
 
 -	Do not worry if you are not seeing any new tokens being detected. There are often around 10-20 new tokens being created per minute but that can vary quite a lot. Sometimes no new tokens may be detected for a few minutes.
 
+- make sure your input a private key (eg. 7d655977921bf61e25d29075712ec7aace28b8d71aa4c7ddd5d403e28efed8a9) into the program and not a seed phrase.
+
 -	The bot only buys tokens whose liquidity is paired with Wrapped BNB (WBNB). You could alter the code to buy tokens paired with another currency if you wanted.
 
 -	Please check that you have enough BNB in your wallet to afford sniping new tokens. If you don’t the bot will not work.
@@ -420,29 +422,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 -->
 
-<!-- ROADMAP -->
-## Roadmap
 
-See the [open issues](https://github.com/BytePhoenixData/BSCTokenSniper/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## Version
+## Versions
 Here are the latest versions. v1.4 is being worked on and will be released shortly.
 ### V1.3
 
-#### This version still needs changes and improvements in it, it is still unfinished. More documentation coming shortly
+#### v1.3 and below are abandoned in favour of v1.4, it is available in telegram group's pinned messages.
 
 Improvements:
 
