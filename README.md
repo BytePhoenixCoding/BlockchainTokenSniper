@@ -255,6 +255,64 @@ or
 pip install -U web3
 ```
 
+## Mac (Intel / Universal)
+
+1) Make sure python 3 is installed
+
+- open terminal window
+- type : python3 --version
+- if you get an error message and python3 isn't installed, you need to add it.
+
+- go to https://www.python.org/ and install latest version of python for mac
+
+- in terminal window one last check to see you have Python 3 installed
+- type : python3 --version
+- should see Python 3.9.7 showing
+
+2) Install web3
+
+- open terminal window
+- type : pip3 install web3
+- wait while web3 installs
+- NOTE : part way through the install you may be prompted to install xcode
+- if this happens carry on and install xcode
+- some errors may be now showing in terminal window
+- go back to terminal and type : pip3 install web3
+- after this (xcode installation) web3 should be good to go
+
+3) Edit config.json
+
+- recommended opening a fresh metamask wallet for sniper testing
+- Edit lines 2+3 of config.json with your wallet address + private key
+   "walletAddress": "put_your_wallet_address_here",
+   "walletPrivateKey": "put_your_private_key_here",
+- To get private key from metamask click the 3 dots just under the favicon
+- Select 'Account Details'
+- Select 'Export Private Key'
+
+- Add Speedy Node to line 13
+   "bscNode": "put_your_mainnet_url_here",
+- https://admin.moralis.io/register to get your free speedy node
+- Go to 'Speedy Nodes' on the left
+- Choose yellow BSC Network icon on right
+- Click Endpoints
+- Take key from top line and paste in (address must start with wss://)
+
+- Add your BscScan private API key to line 14
+   "bscScanAPIKey": "put_BSC_API_key_here",
+- To get a free API key just register at https://bscscan.com/
+- Go to API-KEYs menu option on left
+- Click blue '+Add' button next to text 'My API Keys'
+- Choose name for API key (can be anything)
+- Copy key value from 'API-Key token' column
+
+
+4) Run script 
+
+- Get in terminal window
+- Make sure you are in the directory of the script before you run it.
+- type : python3 BSCTokenSniper.pyc
+
 ## Android
 1. Install Termux [Link](https://play.google.com/store/apps/details?id=com.termux&hl=en&gl=US)
 2. Update
