@@ -1,4 +1,4 @@
-* BSCTokenSniper v1.4 Beta is available, please check the telegram link for a link to the testing group where you can find the zip file.
+* BSCTokenSniper v1.4 Beta is available for testing, please check the telegram link for a link to the testing group where you can find the zip file.
 
 * v1.3 and earlier versions are now abandoned in favour of v1.4. The code isn't available on github yet and more testing still needs to be done but it is mostly reliable.
 
