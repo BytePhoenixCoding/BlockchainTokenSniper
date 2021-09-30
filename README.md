@@ -160,10 +160,15 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-- Python 3 or later installed
-- BscScan API key (completely free of charge, create an account on BscScan and generate a free API key)
-- BSC wallet address and private key
-- enough BNB in your wallet to snipe tokens.
+BSCTokenSniper is completely free to use and there are no setup costs.
+
+- Windows, Mac, Linux or Android OS (windows preferred)
+- a reasonably fast internet connection
+- Python 3 or later installed (ideally 3.9.7 or later)
+- BscScan API key (free of charge, create an account on BscScan and generate a free API key)
+- BSC wallet address and private key (not seed phrase)
+- a private node (generate one free of charge from moralis.io - steps are available further below)
+- enough BNB in your wallet to snipe tokens
 
 ### Operating System
 
