@@ -138,6 +138,9 @@ The bot does not incur any additional fees, only fees are BSC network transactio
 
 From v1.3 onwards, the bot's source code will be heavily obfuscated and compiled to prevent people stealing code and scammers trying to bypass this system as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then that can be transferred to your main wallet.
 
+From v1.4 onwards the bot will have a tax on profit made: in the specific sniper a tax of 5% will be automatically sent to the dev's wallet if a profit over 0.01BNB is made, and the same for the multi sniper but it will be 10%. This allows us to offer you the software free of charge and greatly supports the development of this bot, and it will not cause you to lose money.
+
+
 © 2021
 
 ### Built With
