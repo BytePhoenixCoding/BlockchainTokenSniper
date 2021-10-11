@@ -414,10 +414,23 @@ Note: be very careful when editing config.json and make sure to not alter the sy
 -	To launch the bot, run the ‘launchBSCTokenSniper.bat’. The bot should then open in a cmd window and load.
 -	Don’t left click in the cmd window as it will enable select mode and stop the output (you will see ‘Select’ in the title). If this happens right click your mouse to deselect it. 
 
-
-
-
 To use other version you need to go to the directory needed and run the python script.
+
+
+# Common errors and how to fix them
+
+Incorrectly configured config.json file: this means the bot cannot read your config.json file. Check that it is syntactically correct with no missing symbols, all fields are 
+filled out correctly and restart the program.
+
+Cannot connect to BSC node: The bot cannot connect to the BSC node. Make sure that you are using a valid BSC websocket node (starting with wss://) and restart.
+
+ValueError: {'code': -32000, 'message': 'transaction underpriced'}: You are using too low gas. Increase gas price / limit and restart.
+
+websockets.exceptions.ConnectionClosedError: code = 4040 (private use), reason = Draining connection: the bot cannot connect properly to the node. Make sure it is not
+overloaded / try a different node and try again.
+
+
+
 
 
 <!-- USAGE EXAMPLES -->
