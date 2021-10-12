@@ -419,15 +419,36 @@ To use other version you need to go to the directory needed and run the python s
 
 # Common errors and how to fix them
 
-Incorrectly configured config.json file: this means the bot cannot read your config.json file. Check that it is syntactically correct with no missing symbols, all fields are 
+```Incorrectly configured config.json file```
+This means the bot cannot read your config.json file. Check that it is syntactically correct with no missing symbols, all fields are 
 filled out correctly and restart the program.
 
-Cannot connect to BSC node: The bot cannot connect to the BSC node. Make sure that you are using a valid BSC websocket node (starting with wss://) and restart.
+```Cannot connect to BSC node```
+The bot cannot connect to the BSC node. Make sure that you are using a valid BSC websocket node (starting with wss://) and restart.
 
-ValueError: {'code': -32000, 'message': 'transaction underpriced'}: You are using too low gas. Increase gas price / limit and restart.
+```ValueError: {'code': -32000, 'message': 'transaction underpriced'}```
+You are using too low gas. Increase gas price / limit and restart.
 
-websockets.exceptions.ConnectionClosedError: code = 4040 (private use), reason = Draining connection: the bot cannot connect properly to the node. Make sure it is not
-overloaded / try a different node and try again.
+```websockets.exceptions.ConnectionClosedError: code = 4040 (private use), reason = Draining connection```
+The bot cannot connect properly to the node. Make sure the node not overloaded / your internet connection is good enough / you dont have firewall software interfering with the bot / try a different node and try again.
+
+```RuntimeError: Bad magic error in .pyc file```
+Your python version is too low. Use the latest version of python (3.9.7 has been tested and works well) and uninstall older versions of python.
+
+```ValueError: {'code': -32000, 'message': 'insufficient funds for gas * price + value'}```
+You do not have enough BNB in your wallet to snipe with, or you dont have enough of the liquidity paired token specified (eg. BUSD). Make sure your wallet has enough BNB / specified pair token and try again.
+
+```ModuleNotFoundError: No module named 'web3'```
+You do not have web3 installed or python does not recognise it. Install it with ```pip install web3``` in cmd line or reinstall if faulty.
+
+```ModuleNotFoundError: No module named 'keyboard'```
+You do not have keyboard module installed or python doesn't recognise it. Install it with ```pip install keyboard``` in cmd line or reinstall if faulty.
+
+```PancakeLibrary: INSUFFICIENT_INPUT_AMOUNT```
+Haven't found solution yet, come back later for solution.
+
+
+
 
 
 
