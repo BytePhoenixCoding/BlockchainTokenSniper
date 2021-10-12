@@ -2,7 +2,7 @@
 
 * v1.3 and earlier versions are now abandoned in favour of v1.4. The code isn't available on github yet and more testing still needs to be done but it is mostly reliable.
 
-* This github is still a bit of a mess as new features are still being added and tested constantly to v1.4. Some parts of the description are irrelevant or outdated.
+* This description is still a bit of a mess as new features are still being added and tested constantly to v1.4. Some parts of the description are irrelevant or outdated.
 
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
