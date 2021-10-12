@@ -94,7 +94,7 @@
 <li><a href="#configuration-file">Configuration File</a></li>
     <li><a href="#mini-audit">Mini audit</a></li>
     <li><a href="#things-to-note">Things to note</a></li>
-    <li<a href="#common-errors">Common errors and how to fix them</a></li>
+    <li><a href="#common-errors">Common errors and how to fix them</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li>
         <a href="#contributing">Contributing</a>
