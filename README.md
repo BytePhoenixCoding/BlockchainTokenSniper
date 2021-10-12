@@ -135,11 +135,14 @@ The bot will buy the tokens directly through the Binance Smart Chain using the P
 By avoiding web interfaces & Metamask and directly with Ethereum & EVM Nodes you can snipe tokens faster than any of the web-based platforms. This allows tokens to be sniped almost instantly. During our testing we found the bot would typically be within the first 3 buy transactions of all tokens it finds.
 The bot buys the tokens using the user's wallet address and private key. This information is kept secure, is only stored locally on your computer, and is only ever used to buy tokens (look through the code to see for yourself).
 
-The bot does not incur any additional fees, only fees are BSC network transaction fees and PancakeSwap fees.
+The bot does not incur any additional fees except from the dev fees on profit made, only fees are BSC network transaction fees and PancakeSwap fees.
 
 From v1.3 onwards, the bot's source code will be heavily obfuscated and compiled to prevent people stealing code and scammers trying to bypass this system as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then that can be transferred to your main wallet.
 
-From v1.4 onwards the bot will have a tax on profit made: in the specific sniper a tax of 5% will be automatically sent to the dev's wallet if a profit over 0.01BNB is made, and the same for the multi sniper but it will be 10%. This allows us to offer you the software free of charge and greatly supports the development of this bot, and it will not cause you to lose money.
+How do the developers make money? 
+
+From v1.4 onwards the bot will have a tax on profit made: in the launch sniper a tax of 5% will be auto sent to the dev's wallet when a profit is made. For the multi sniper, a tax of 10% is used. The tax is only sent when profit is made and there is no dev fees if you break even or lose money. This allows us to offer everyone the bot free of charge, as we believe it isn't fair that some developers are charging often $1000's for similar bots. The fees made massively support the project and allow us to test out new features.
+
 
 
 © 2021
