@@ -4,23 +4,7 @@
 
 * This description is still a bit of a mess as new features are still being added and tested constantly to v1.4. Some parts of the description are irrelevant or outdated.
 
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.S
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 <!--[![Contributors][contributors-shield][contributors-url] -->
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -115,12 +99,17 @@
 
 <!--[![Product Name Screen Shot][product-screenshot]](https://example.com)-->
 
-The aim of BSC Token Sniper is to buy new tokens with a specified amount of BNB, with the aim of the price rising. Once the bot detects a PairCreated event, it is able to check the token (mini audit). It then later sells the token when the price is high enough.
+BSCTokenSniper is a free collection of 2 tools (BSCMultiSniper and BSCLaunchSniper) programmed in Python and Web3 which aim to automatically buy newly listed tokens and auto sell tokens when profitable.
 
- It can check if:
+BSCMultiSniper detects new tokens as soon as liquidity is added. It will check if it is not a scam and if not will buy it. It will then monitor the price of the token and auto sell at the specified profit margin (eg. 2x, 10x etc).
+
+BSCLaunchSniper allows you to snipe new token launches paired with any token (eg. BNB, BUSD). It has the ability to mempool snipe and will instantly buy when liquidity is added. It constantly updates the price and shows you the profit you've made, has the ability to autosell at a specified profit margin (eg, 2x, 10x etc) and also allows you to sell manually with your keyboard. 
+
+ The multisniper can check if:
 -	Token's source code is verified.
 - Token is a honeypot
 - Token is a test
+- Token is a rug (in development, not always accurate)
 
 The user can decide whether to enable the mini audit or turn it off (bear in mind you will likely be investing in a lot of scams / rugpulls / honeypots if you don’t).
 Once the token has/hasn't been through a mini audit the bot will then attempt to buy X amount of tokens with the specified amount of BNB.
@@ -133,10 +122,9 @@ The bot does not incur any additional fees except from the dev fees on profit ma
 
 From v1.3 onwards, the bot's source code will be heavily obfuscated and compiled to prevent people stealing code and scammers trying to bypass this system as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then that can be transferred to your main wallet.
 
-How do the developers make money? 
+How do the developers make money? What are the fees?
 
 From v1.4 onwards the bot will have a tax on profit made: in the launch sniper a tax of 5% will be auto sent to the dev's wallet when a profit is made. For the multi sniper, a tax of 10% is used. The tax is only sent when profit is made and there is no dev fees if you break even or lose money. This allows us to offer everyone the bot free of charge, as we believe it isn't fair that some developers are charging often $1000's for similar bots. The fees made massively support the project and allow us to test out new features.
-
 
 
 © 2021
@@ -148,6 +136,7 @@ This project is built with:
 * [Python3.9](https://www.python.org/downloads/)
 * [Web3](https://web3py.readthedocs.io/en/stable/)
 * [BscScan Api](https://bscscan.com/apis)
+* Python keyboard module
 
 
 <!-- GETTING STARTED -->
@@ -161,12 +150,12 @@ To get a local copy up and running follow these simple steps.
 BSCTokenSniper is completely free to use and there are no setup costs.
 
 - Windows, Mac, Linux or Android OS (windows preferred)
-- a reasonably fast internet connection
+- A reasonably fast internet connection
 - Python 3 or later installed (ideally 3.9.7 or later)
 - BscScan API key (free of charge, create an account on BscScan and generate a free API key)
 - BSC wallet address and private key (not seed phrase)
-- a private node (generate one free of charge from moralis.io - steps are available further below)
-- enough BNB in your wallet to snipe tokens
+- A BSC node (generate one free of charge from moralis.io - steps are available further below)
+- Enough BNB in your wallet to snipe tokens (and other paired tokens if you choose a different liquidity pair address eg. BUSD)
 
 ### Operating System
 
@@ -273,7 +262,7 @@ pip install -U web3
 
 - in terminal window one last check to see you have Python 3 installed
 - type : python3 --version
-- should see Python 3.9.7 showing
+- should see Python 3.9.7 or later showing
 
 2) Install web3
 
@@ -297,7 +286,7 @@ pip install -U web3
 - Select 'Export Private Key'
 
 - Add Speedy Node to line 13
-   "bscNode": "put_your_mainnet_url_here",
+   "bscNode": "Enter node URL here",
 - https://admin.moralis.io/register to get your free speedy node
 - Go to 'Speedy Nodes' on the left
 - Choose yellow BSC Network icon on right
@@ -368,6 +357,8 @@ for V1.3 or latest, you should install Python3.9
 
 When you download the bot, you will find a config.json file. This is where you need to add the following data.
 
+For BSCMultiSniper:
+
 * walletAddress: your BSC wallet address (e.g., Metamask)
 * walletPrivateKey: your private key of your wallet address (your private key is kept safe and not shared in any other place: DO NOT share with anyone else)
 * amountToSpendPerSnipe: The amount in BNB you want your wallet to spend on every new token. (e.g., 0.00025 means a new snipe will spend 0.00025 BNB on the new token)
@@ -380,22 +371,27 @@ When you download the bot, you will find a config.json file. This is where you n
 * minLiquidityAmount: The minimum amount of liquidity in BNB in a token that the bot will purchase. The bot detects the amount of BNB in a newly detected token, and only buys * tokens that have liquidity higher than the amount specified in the config file. Set to -1 to disable.
 * observeOnly: enabling this will bypass the mini audit feature which allows you to observe how the bot audits tokens. Recommended to try this at the start to make sure the bot can scan for new tokens.
 
+For BSCLaunchSniper:
+
+"walletAddress": wallet addresss
+"walletPrivateKey": wallet private key (must be a private key, NOT seed phrase)
+"pancakeSwapRouterAddress": chosen router address, recommended to leave at default
+"pancakeSwapFactoryAddress": chosen factory address, recommended to leave at default
+"liquidityPairAddress": chosen liquidity pair address - is WBNB by default, but you can set to BUSD, USDC, USDT etc to snipe BUSD etc paired tokens
+"nonBNBPairAddress": (True/False) if the liquidity pair address is not BNB, eg. if you use BUSD then set to False, if using BNB then set to True
+"bscNode": your BSD node URL (must start with wss://), recommended to use speedynode but you can use a private node if you wish
+"transactionRevertTimeSeconds": TX revert time in seconds, recommended to leave at default
+"gasAmount": amount of gas for bot to use in TX's, recommended to leave at 3 mil
+"gasPrice": price of gas for but to use in TX's, recommended to leave at 5, you can increase for faster snipes (you may have to increase gas amount though)
+"approveSellTimeDelay": time to delay for getting receipt of approve TX's, recommended to leave at default
+"sellTokens": (True/False) Do you want to sell tokens through the bot. Recommended to leave at True.
+
+
 # Mini audit
 
 The bot has an optional mini audit feature which aims to filter some of the scam coins (eg. wrongly configured, honeypots). Obviously, this is not going to be as good as a proper audit (eg. CertiK) but at least the coins the bot will buy will be higher quality and if you enable the options, you should be able to sell the tokens later on (provided it hasn’t been rugged).
 
-The following json entries are for mini audit. Set all to false to disable mini audits, although beware you will probably be buying a lot of scam coins.
-checkSourceCode: checks if source code is verified. This function is needed for all the other functions so if you disable this be sure to disable all the other audit options. Recommended. v1.3 onwards will use RugDoc tool to check for honeypots and high fee tokens.
-
-checkValidPancakeV2: checks if the correct PancakeSwap v2 router address is used in the code. Be aware some contracts may externally set their router address so this function may reject a potentially good token. Not recommended.
-
-checkMintFunction: checks if a mint function is present in the code. Recommended.
-
-checkHoneypot: checks the code to see if it might be a honeypot (where you can buy tokens but cannot sell). Recommended.
-
-checkPancakeV1Router: checks to see if the PancakeSwap v1 router address is used in the code. You will not be able to sell the tokens later on if PCS v1 router address is used. Highly recommended.
-
-checkForTest: checks for tokens that are named 'test'. Often these tokens don't work or are not an investment opportunity.
+The bot uses RugDoc API to check for honeypots although we may use a different API in the future.
 
 Note: be very careful when editing config.json and make sure to not alter the syntax. For mini audit options, either use “True” or “False” making sure to capitalise the 1st letter. Any other spelling will not work.
 
@@ -403,13 +399,14 @@ Note: be very careful when editing config.json and make sure to not alter the sy
 
 -	Do not worry if you are not seeing any new tokens being detected. There are often around 10-20 new tokens being created per minute but that can vary quite a lot. Sometimes no new tokens may be detected for a few minutes.
 
-- make sure your input a private key (eg. 7d655977921bf61e25d29075712ec7aace28b8d71aa4c7ddd5d403e28efed8a9) into the program and not a seed phrase.
+- make sure your input a private key (eg. 7d655977921bf61e25d29075712ec7aFce28b8d71aa4c7d8d5d403e28efed8b9) into the program and not a seed phrase.
 
--	The bot only buys tokens whose liquidity is paired with Wrapped BNB (WBNB). You could alter the code to buy tokens paired with another currency if you wanted.
+-	Please check that you have enough BNB in your wallet to afford sniping new tokens. If you don’t the bot will not work. If using a different liquidity pair address make sure theres enough of that token to use for sniping as well.
 
--	Please check that you have enough BNB in your wallet to afford sniping new tokens. If you don’t the bot will not work.
 -	Please be careful when editing the config.json file. If you delete a comma or quotation mark etc. the bot will not work and throw an error.
--	To launch the bot, run the ‘launchBSCTokenSniper.bat’. The bot should then open in a cmd window and load.
+
+-	To launch the bot, run the ‘launch.bat’. The bot should then open in a cmd window and load.
+
 -	Don’t left click in the cmd window as it will enable select mode and stop the output (you will see ‘Select’ in the title). If this happens right click your mouse to deselect it. 
 
 To use other version you need to go to the directory needed and run the python script.
@@ -447,107 +444,16 @@ Bug with program, should be fixed later on.
 
 
 
-
-
-
-
-
-
-
-
 <!-- USAGE EXAMPLES -->
 <!--
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
+Nothing interesting here.
 -->
 
 
 ## Versions
-Here are the latest versions. v1.4 is being worked on and will be released shortly.
-### V1.3
-
-#### v1.3 and below are abandoned in favour of v1.4, it is available in telegram group's pinned messages.
-
-Improvements:
-
-- Can queue a token if 2 are detected (rare but can happen)
-
-- PCS factory address now editable from config.json
-
-- detects if pancakeswaprouteraddress is in code more accurately (previously would ignore if text was different upper or lower case from config file)
-
-- Users are now warned if config.json file is incorrectly configured and program exits.
-
-- program automatically detects whether os is windows or not and applies appropriate title code (same script should work universally on any os with python)
-
-- rugdoc API integrated. This will reject tokens that are dodgy, have high fees (over 10%) and honeypots.
-
-- antibot delay implemented. This allows you to delay purchase for x amount of seconds specified in config file, as some bots will have a very high tax in the first
-few blocks
-
-- prevents tokens being bought that are same as previous
-
-- autosell feature now working (STILL GOT ISSUES WITH IT - SOMETIMES GIVES ERRORS)
-
-- some bits of code tidied up
-
-### V1.2
-
-Improvements:
-
-- Added code blacklist (code_exceptions.txt): the program will ignore any program with code that is in this file
-
-- Added min liquidity checker (won't buy token unless it has certain amount of liquidity) - edit threshold in config.json
-
-- Fixed issue with buy - saying transaction failed when it was fine
-
-- Changed to websocketprovider instead of httpprovider - alot more reliable and also faster, should be less crashing as well
-
-- You can now change websocketprovider node in config.json instead of being in code
-
-- Some bits of code tidied up
-
-(SpecifiedTokenSniper is not updated and still in v1.1 folder, will be integrated in main program and in GUI in future)
-
-Also massive thanks to Christiaan Van AS, Muhammed Nurhaqqin and everyone else on Telegram for development and support with this project.
-
-
-
-### V1.1
-
-Just a few improvements, but largely untested. Would greatly appreciate if you could give me feedback. Thanks!
-
-Improvements:
-
-- Added 'check for test' to ignore tokens which have 'test' in their name.
-
-- Added 'try' and 'catch' clauses for buy token and listenForTokens function to avoid exiting with error
-
-- Added function to detect WBNB pair in either pair 1 or pair 2 (currently only detects WBNB in pair 1 which potentially ignores alot of tokens)
-
-- Created 'SpecifiedTokenSniper' script - this allows you to snipe a specific token at launch as soon as it gains liquidity, if you know the token address. 
-If you're lucky (like the refinable bot) you could make huge amounts of money.
-
-- You can now pick what liquidity pair address you would like. It is set to WBNB by default (recommended) but you can change to anything if you wish.
-
-New config.json entries:
-
-- "checkForTest": choose whether "test" is in the token's name. Only enable if checkSourceCode is enabled. Recommended.
-
-- "liquidityPairAddress": Leave it unless you want to change the liquidity pair address.
-
-
-### BSCTokenSniper v1.0
-A bot written in Python to automatically buy tokens on the Binance Smart Chain as soon as liquidity is provided.
-
-BSCTokenSniper is a bot written in Python to detect new PairCreated events in the Binance Smart Chain (when a liquidity pair has been created) and buy the token. It is quite reliable and works well but it is the first version, so if you find any problems/improvements/suggestions please let me know by raising an issue.
-
-
-
+v1.4 is being worked on and will be released on github shortly.
 
 # FAQs
 
@@ -555,7 +461,6 @@ I've sniped loads of coins - but how can I check which ones have made a profit?
 -	For this go to poocoin.app, click 'Wallet' and connect your Web3 wallet that you are using for your bot (eg. Metamask).
 -	It will then give you the list of tokens in your wallet and show you which ones have made the highest profit.
 -	Click the descending arrow next to the balance tab to show highest to lowest tokens value.
--	Then you can manually sell the tokens which have made you a profit on PancakeSwap.
 
 I keep getting ‘Transaction failed’ – what’s going on?
 Either:
@@ -564,15 +469,20 @@ Either:
 -	Not enough BNB to pay for the token and TX fees
 
 The bot isn’t sniping that fast (eg. couple seconds between detection and buying)
-- This is mainly due to internet speed and computer processing power. 
+- This is mainly due to internet speed, the node you are using and computer processing power. 
 
 # Risks
 
-Investing in BSC tokens / shitcoins is risky and be aware you could lose all your money. For this reason, do not invest more money than you are prepared to lose.
-It is pretty much impossible to snipe bots very early and be sure it isn’t a rug pull. When people create tokens in most situations, they will manually create liquidity in PancakeSwap. This is when the bot will detect the token. If they burn / lock liquidity, they will then usually send their LP tokens manually to a deadcoin address or put them in a liquidity locker. Therefore, you can’t immediately snipe the tokens with 100% certainty they aren’t rugpulls.
+Investing in BSC tokens / shitcoins is risky and be aware you could lose all your money. For this reason, do not invest more money than you are prepared to lose. 
+
+It is pretty much impossible to snipe bots very early and be sure it isn’t a rug pull. When people create tokens in most situations, they will manually create liquidity in PancakeSwap. This is when the bot will detect the token. If they burn / lock liquidity, they will then usually send their LP tokens manually to a deadcoin address or put them in a liquidity locker. Therefore, you can’t immediately snipe the tokens with 100% certainty they aren’t rugpulls. We are working on a solution to this.
+
+When using the launch sniper, DYOR. Look at the TG group, the contract's code, scanning tools
 
 The mini audit feature can’t be 100% accurate but aims to filter out the majority of scams / hacks and reduce the chance of losing your money.
 If a programmer creates token code in a unique way, they may be able to bypass detection although this is generally quite rare, as the majority of tokens are forks of big projects with very little of the code having been changed e.g., Safemoon.
+
+We are not at fault if you decide to remortgage your house to spend on 'Shiba Inu Flocki Elon Power XXX Simp Moon token'. You get what I mean.
 
 # Things to do / improve / fix
 
@@ -582,18 +492,18 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 
 - Improve reliability: the program can sometimes unexpectedly freeze / quit. This is being investigated.
 
-- Allow user to set slippage percentage - currently bot just selects the best slippage automatically 
+- Allow user to set slippage percentage - currently bot just selects the best slippage automatically.
 
+- setup TG launch channel for upcoming tokens.
 
 ## Donations
 
-Any donation of any token is massively appreciated and helps alot with the development of the project.
+We greatly welcome any donation of any token, it is massively appreciated and helps alot with the development of the project.
 
 | Dev | BSC Address |
 |:---:|:---:|
 | BytePhoenix (founder) | 0x17fC36Fd733D2b2762c020e34E45b5C95723c9b3 |
 | CVA_CryptoPlayground | 0x3a5A12dfffD327AFdaC7BEA60ECF7A48410E873a |
-| Geeks121 | 0xbeeF1858CBDdb48319893b028bE9D914d45f51D9 |
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
