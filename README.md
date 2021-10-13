@@ -484,6 +484,16 @@ If a programmer creates token code in a unique way, they may be able to bypass d
 
 We are not at fault if you decide to remortgage your house to spend on 'Shiba Inu Flocki Elon Power XXX Simp Moon token'. You get what I mean.
 
+Some good tools to use for detecting scams:
+
+rugpulldetector.com
+bscheck.eu
+moonarch.app/token
+honeypot.is
+rugdoc.io/honeypot
+rugscan.finance
+tokensniffer.com
+
 # Things to do / improve / fix
 
  - Look into rugpull detection (in development) - unfortunately current there's so many scams on BSC. We are looking for the best way to filter out scams and get the gems
