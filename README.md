@@ -348,10 +348,10 @@ Assuming you are in BSCTokenSniper Directory:
 run 
 
 ```sh
-python3 BSCTokenSniper.py
+python3 BSCMultiSniper.pyc (or BSCLaunchSniper.pyc)
 ```
 
-for V1.3 or latest, you should install Python3.9
+for V1.3 or latest, you should install Python 3.9 or later
 
 # Configuration File
 
