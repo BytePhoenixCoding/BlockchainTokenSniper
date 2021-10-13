@@ -424,7 +424,7 @@ filled out correctly and restart the program.
 ```Cannot connect to BSC node```
 The bot cannot connect to the BSC node. Make sure that you are using a valid BSC websocket node (starting with wss://) and restart.
 
-```ValueError: {'code': -32000, 'message': 'transaction underpriced'}```
+```ValueError: {'code': -32000, 'message': '(replacement) transaction underpriced'}```
 You are using too low gas. Increase gas price / limit and restart.
 
 ```websockets.exceptions.ConnectionClosedError: code = 4040 (private use), reason = Draining connection```
@@ -443,7 +443,10 @@ You do not have web3 installed or python does not recognise it. Install it with 
 You do not have keyboard module installed or python doesn't recognise it. Install it with ```pip install keyboard``` in cmd line or reinstall if faulty.
 
 ```PancakeLibrary: INSUFFICIENT_INPUT_AMOUNT```
-Haven't found solution yet, come back later for solution.
+Bug with program, should be fixed later on.
+
+
+
 
 
 
