@@ -127,7 +127,7 @@ How do the developers make money? What are the fees?
 From v1.4 onwards the bot will have a tax on profit made: in the launch sniper a tax of 5% will be auto sent to the dev's wallet when a profit is made. For the multi sniper, a tax of 10% is used. The tax is only sent when profit is made and there is no dev fees if you break even or lose money. This allows us to offer everyone the bot free of charge, as we believe it isn't fair that some developers are charging often $1000's for similar bots. The fees made massively support the project and allow us to test out new features.
 
 
-© 2021
+© Copyright 2021 
 
 ### Built With
 
