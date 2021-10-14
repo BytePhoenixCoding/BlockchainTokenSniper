@@ -89,6 +89,7 @@
     <li><a href="#faqs">FAQs</a></li>
     <li><a href="#donations">Donations</a></li>
     <li><a href="#things-to-do--improve--fix">Things to do / improve / fix</a></li>
+    <li><a href="#how-to-pre-audit-tokens-for-launch-sniping">How to pre-audit tokens for launch sniping</a></li>
   
   </ol>
 </details>
@@ -514,6 +515,23 @@ We greatly welcome any donation of any token, it is massively appreciated and he
 |:---:|:---:|
 | BytePhoenix (founder) | 0x17fC36Fd733D2b2762c020e34E45b5C95723c9b3 |
 | CVA_CryptoPlayground | 0x3a5A12dfffD327AFdaC7BEA60ECF7A48410E873a |
+
+
+# How to pre audit tokens for launch sniping
+
+There are a few tokens you can use to audit tokens.
+
+Before a token is ready to launch, I would recommend the following steps:
+
+1) Try and find the contract address before launch. If it hasn't been posted, search BSCscan for recently 
+created contracts and it may appear. Make sure it is created recently.
+3) Check if the source code is verified. If it isn't, stay away as its probably a scam. Legit developers have nothing to hide.
+4) Check the source code for any suspicious functions by going to rugpulldetector.com and inputting the contract code. If there's any red
+warnings then do not snipe it.
+5) Check the TG group. Most of the time, the groups that have mute messaging most / all the time are scams. If theres more muted time than unmuted time
+then its likely to be a scam.
+6) If you can message in the group, post a message like "Everyone, please make sure to check the token is not a scam on honeypot.is / bscheck.eu / rugpulldetector.com". Do not say that it is a scam, legit admins should not have a problem with a message like this, scam admins will most likely block you / delete the message.
+7) Use option 2 of the sniper a few mins before launch (5-10 mins) and it is recommended to sell early (first 5 mins).
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
