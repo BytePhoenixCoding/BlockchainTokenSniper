@@ -102,7 +102,7 @@
 
 BSCTokenSniper is a free collection of 2 tools (BSCMultiSniper and BSCLaunchSniper) programmed in Python and Web3 which aim to automatically buy newly listed tokens and auto sell tokens when profitable.
 
-BSCMultiSniper detects new tokens as soon as liquidity is added. It will check if it is not a scam and if not will buy it. It will then monitor the price of the token and auto sell at the specified profit margin (eg. 2x, 10x etc).
+BSCMultiSniper detects new tokens as soon as liquidity is added. It will check if it is not a scam and if not will buy it. It will then monitor the price of the token and auto sell at the specified profit margin (eg. 1.5x, 2x, 10x etc).
 
 BSCLaunchSniper allows you to snipe new token launches paired with any token (eg. BNB, BUSD). It has the ability to mempool snipe and will instantly buy when liquidity is added. It constantly updates the price and shows you the profit you've made, has the ability to autosell at a specified profit margin (eg, 2x, 10x etc) and also allows you to sell manually with your keyboard. 
 
@@ -110,7 +110,7 @@ BSCLaunchSniper allows you to snipe new token launches paired with any token (eg
 -	Token's source code is verified.
 - Token is a honeypot
 - Token is a test
-- Token is a rug (in development, not always accurate)
+- Token is a rug (StaySAFU scanner will be used, 
 
 The user can decide whether to enable the mini audit or turn it off (bear in mind you will likely be investing in a lot of scams / rugpulls / honeypots if you don’t).
 Once the token has/hasn't been through a mini audit the bot will then attempt to buy X amount of tokens with the specified amount of BNB.
@@ -121,7 +121,7 @@ The bot buys the tokens using the user's wallet address and private key. This in
 
 The bot does not incur any additional fees except from the dev fees on profit made, only fees are BSC network transaction fees and PancakeSwap fees.
 
-From v1.3 onwards, the bot's source code will be heavily obfuscated and compiled to prevent people stealing code and scammers trying to bypass this system as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then that can be transferred to your main wallet.
+The bot's source code is heavily obfuscated and compiled to prevent people stealing code and scammers trying to bypass this system as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then that can be transferred to your main wallet.
 
 How do the developers make money? What are the fees?
 
@@ -309,6 +309,11 @@ pip install -U web3
 - Make sure you are in the directory of the script before you run it.
 - type : python3 BSCTokenSniper.pyc
 
+5) Open finder, then click Applications —> Python 3.7 folder to expand it. 
+There should be a file called 'Install Certificated.command', double click the file to run it. 
+It will open another popup terminal window and show below command execution output text. 
+Once it is complete close it and run the bot.
+
 ## Android
 1. Install Termux [Link](https://play.google.com/store/apps/details?id=com.termux&hl=en&gl=US)
 2. Update
@@ -443,6 +448,9 @@ You do not have keyboard module installed or python doesn't recognise it. Instal
 ```PancakeLibrary: INSUFFICIENT_INPUT_AMOUNT```
 Bug with program, should be fixed later on.
 
+```[Warning] Could not initialise filter or connect to node, trying again...```
+This warning shows when the node deletes the filter or somehow stops the connection with the bot. The bot will auto-attempt to reconnect and if you only see this error once or twice then there is nothing to worry about. If it repeatedly shows then please let the developers know.
+
 
 
 <!-- USAGE EXAMPLES -->
@@ -494,18 +502,17 @@ honeypot.is
 rugdoc.io/honeypot
 rugscan.finance
 tokensniffer.com
+app.staysafu.org/scanner
 
 # Things to do / improve / fix
 
- - Look into rugpull detection (in development) - unfortunately current there's so many scams on BSC. We are looking for the best way to filter out scams and get the gems
+ - Look into rugpull detection - we have got a license from StaySAFU to use their API, this will be integrated into the bot in the future.
  
 - Modify bot to work on different blockchains eg. Ethereum, Polygon
 
 - Improve reliability: the program can sometimes unexpectedly freeze / quit. This is being investigated.
 
 - Allow user to set slippage percentage - currently bot just selects the best slippage automatically.
-
-- setup TG launch channel for upcoming tokens.
 
 ## Donations
 
@@ -530,7 +537,7 @@ created contracts and it may appear. Make sure it is created recently.
 warnings then do not snipe it.
 5) Check the TG group. Most of the time, the groups that have mute messaging most / all the time are scams. If theres more muted time than unmuted time
 then its likely to be a scam.
-6) If you can message in the group, post a message like "Everyone, please make sure to check the token is not a scam on honeypot.is / bscheck.eu / rugpulldetector.com". Do not say that it is a scam, legit admins should not have a problem with a message like this, scam admins will most likely block you / delete the message.
+6) If you can message in the group, post a message like "Everyone, please make sure to check the token is not a scam on honeypot.is / bscheck.eu / rugpulldetector.com". Do not directly say that it is a scam, legit admins should not have a problem with a message like this, scam admins will most likely block you / delete the message.
 7) Use option 2 of the sniper a few mins before launch (5-10 mins) and it is recommended to sell early (first 5 mins).
 
 
