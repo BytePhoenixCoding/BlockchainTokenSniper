@@ -365,31 +365,51 @@ When you download the bot, you will find a config.json file. This is where you n
 
 For BSCMultiSniper:
 
-* walletAddress: your BSC wallet address (e.g., Metamask)
+* walletAddress: your BSC wallet address (e.g., Metamask) 
 * walletPrivateKey: your private key of your wallet address (your private key is kept safe and not shared in any other place: DO NOT share with anyone else)
+
 * amountToSpendPerSnipe: The amount in BNB you want your wallet to spend on every new token. (e.g., 0.00025 means a new snipe will spend 0.00025 BNB on the new token)
+
 * transactionRevertTimeSeconds: Time to spend before transaction reverts. Recommended to leave at default.
+
 * gasAmount: amount of max gas to use per transaction. Recommended to leave at default.
+
 * gasPrice:  max price of gas to use per transaction. Recommended to leave at default.
+
 * bscNode: Address for custom BSC node. Recommended to leave at default.
+
 * bscScanAPIKey: Your API key from BscScan.
+
 * liquidityPairAddress: Address for liquidity pairs. Recommended to leave at default.
-* minLiquidityAmount: The minimum amount of liquidity in BNB in a token that the bot will purchase. The bot detects the amount of BNB in a newly detected token, and only buys * tokens that have liquidity higher than the amount specified in the config file. Set to -1 to disable.
+
+* minLiquidityAmount: The minimum amount of liquidity in BNB in a token that the bot will purchase. The bot detects the amount of BNB in a newly detected token, and only buys tokens that have liquidity higher than the amount specified in the config file. Set to -1 to disable.
+
 * observeOnly: enabling this will bypass the mini audit feature which allows you to observe how the bot audits tokens. Recommended to try this at the start to make sure the bot can scan for new tokens.
 
 For BSCLaunchSniper:
 
-"walletAddress": wallet addresss
+"walletAddress": wallet address
+
 "walletPrivateKey": wallet private key (must be a private key, NOT seed phrase)
+
 "pancakeSwapRouterAddress": chosen router address, recommended to leave at default
+
 "pancakeSwapFactoryAddress": chosen factory address, recommended to leave at default
+
 "liquidityPairAddress": chosen liquidity pair address - is WBNB by default, but you can set to BUSD, USDC, USDT etc to snipe BUSD etc paired tokens
+
 "nonBNBPairAddress": (True/False) if the liquidity pair address is not BNB, eg. if you use BUSD then set to False, if using BNB then set to True
+
 "bscNode": your BSD node URL (must start with wss://), recommended to use speedynode but you can use a private node if you wish
+
 "transactionRevertTimeSeconds": TX revert time in seconds, recommended to leave at default
+
 "gasAmount": amount of gas for bot to use in TX's, recommended to leave at 3 mil
-"gasPrice": price of gas for but to use in TX's, recommended to leave at 5, you can increase for faster snipes (you may have to increase gas amount though)
+
+"gasPrice": price of gas for but to use in TX's, recommended to leave at 5, you can increase for faster snipes eg. 6, 7 (you may have to increase gas amount though)
+
 "approveSellTimeDelay": time to delay for getting receipt of approve TX's, recommended to leave at default
+
 "sellTokens": (True/False) Do you want to sell tokens through the bot. Recommended to leave at True.
 
 
