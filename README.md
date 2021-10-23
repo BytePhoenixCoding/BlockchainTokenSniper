@@ -37,9 +37,7 @@
     <a href="https://github.com/BytePhoenixData/BSCTokenSniper/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/BytePhoenixData/BSCTokenSniper/archive/refs/heads/main.zip">Download zip</a>
-    ·
-    <a href="https://github.com/BytePhoenixData/BSCTokenSniper/issues">Report Bug</a>
+    <a href="https://github.com/BytePhoenixData/BSCTokenSniper/issues">Report Bugs</a>
     ·
     <a href="https://github.com/BytePhoenixData/BSCTokenSniper/issues">Request Feature</a>
     ·
@@ -100,7 +98,7 @@
 
 <!--[![Product Name Screen Shot][product-screenshot]](https://example.com)-->
 
-BSCTokenSniper is a free collection of 2 tools (BSCMultiSniper and BSCLaunchSniper) programmed in Python and Web3 which aim to automatically buy newly listed tokens and auto sell tokens when profitable.
+BSCTokenSniper is a completely free collection of 2 tools (BSCMultiSniper and BSCLaunchSniper) programmed in Python and Web3 which aim to automatically buy newly listed tokens and auto sell tokens when profitable.
 
 BSCMultiSniper detects new tokens as soon as liquidity is added. It will check if it is not a scam and if not will buy it. It will then monitor the price of the token and auto sell at the specified profit margin (eg. 1.5x, 2x, 10x etc).
 
@@ -109,23 +107,22 @@ BSCLaunchSniper allows you to snipe new token launches paired with any token (eg
  The multisniper can check if:
 -	Token's source code is verified.
 - Token is a honeypot
-- Token is a test
-- Token is a rug (StaySAFU scanner will be used, 
+- Token is a rug (StaySAFU scanner will be used)
 
 The user can decide whether to enable the mini audit or turn it off (bear in mind you will likely be investing in a lot of scams / rugpulls / honeypots if you don’t).
 Once the token has/hasn't been through a mini audit the bot will then attempt to buy X amount of tokens with the specified amount of BNB.
 The bot will buy the tokens directly through the Binance Smart Chain using the PancakeSwap v2 router and factory address, so it is much quicker than the PancakeSwap web interface.
 
-By avoiding web interfaces & Metamask and directly with Ethereum & EVM Nodes you can snipe tokens faster than any of the web-based platforms. This allows tokens to be sniped almost instantly. During our testing we found the bot would typically be within the first 3 buy transactions of all tokens it finds.
-The bot buys the tokens using the user's wallet address and private key. This information is kept secure, is only stored locally on your computer, and is only ever used to buy tokens (look through the code to see for yourself).
+By avoiding web interfaces & Metamask and directly with nodes you can snipe tokens faster than any of the web-based platforms. This allows tokens to be sniped almost instantly. During our testing we found the bot would typically be within the first 3 buy transactions of all tokens it finds.
+The bot buys the tokens using the user's wallet address and private key. This information is kept secure, is only stored locally on your computer, and is only ever used to buy tokens.
 
 The bot does not incur any additional fees except from the dev fees on profit made, only fees are BSC network transaction fees and PancakeSwap fees.
 
-The bot's source code is heavily obfuscated and compiled to prevent people stealing code and scammers trying to bypass this system as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then that can be transferred to your main wallet.
+The bot's source code is heavily obfuscated and compiled to prevent people stealing code and scammers trying to bypass this system as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then that can be transferred to your main wallet. You can also use a virtual machine if you like.
 
 How do the developers make money? What are the fees?
 
-From v1.4 onwards the bot will have a tax on profit made: in the launch sniper a tax of 5% will be auto sent to the dev's wallet when a profit is made. For the multi sniper, a tax of 10% is used. The tax is only sent when profit is made and there is no dev fees if you break even or lose money. This allows us to offer everyone the bot free of charge, as we believe it isn't fair that some developers are charging often $1000's for similar bots. The fees made massively support the project and allow us to test out new features.
+From v1.4 onwards the bot will have a tax on profit made: in the launch sniper a tax of 5% will be auto sent to the dev's wallet. For the multi sniper, a tax of 10% is applied. The tax is only sent when profit is made and there is no dev fees if you break even or lose money. This allows us to offer everyone the bot free of charge, as most people do not want to pay hundreds or thousands of dollars for sniper bots. The fees made massively support the project and allow us to test out new features.
 
 
 © Copyright 2021 
@@ -410,7 +407,9 @@ For BSCLaunchSniper:
 
 "approveSellTimeDelay": time to delay for getting receipt of approve TX's, recommended to leave at default
 
-"sellTokens": (True/False) Do you want to sell tokens through the bot. Recommended to leave at True.
+"sellTokens": (True/False) Do you want to sell tokens through the bot. Recommended to leave at True as selling will be alot faster and easier.
+
+"showPoocoinPage": (True/False) Do you want to display poocoin page in your web browser when tokens are bought.
 
 
 # Mini audit
@@ -482,7 +481,7 @@ Nothing interesting here.
 
 
 ## Versions
-v1.4 is being worked on and will be released on github shortly.
+v1.4 is being worked on and will be released on github shortly. It is available in the telegram testing group
 
 # FAQs
 
@@ -498,20 +497,16 @@ Either:
 -	Not enough BNB to pay for the token and TX fees
 
 The bot isn’t sniping that fast (eg. couple seconds between detection and buying)
-- This is mainly due to internet speed, the node you are using and computer processing power. 
+- This is mainly due to your internet speed, the node you are using and your computer processing power. 
 
 # Risks
 
-Investing in BSC tokens / shitcoins is risky and be aware you could lose all your money. For this reason, do not invest more money than you are prepared to lose. 
+Investing in BSC tokens / shitcoins is risky and you should be aware you could lose all your money. For this reason, NEVER invest more money than you can afford to lose. 
 
-It is pretty much impossible to snipe bots very early and be sure it isn’t a rug pull. When people create tokens in most situations, they will manually create liquidity in PancakeSwap. This is when the bot will detect the token. If they burn / lock liquidity, they will then usually send their LP tokens manually to a deadcoin address or put them in a liquidity locker. Therefore, you can’t immediately snipe the tokens with 100% certainty they aren’t rugpulls. We are working on a solution to this.
+When using the launch sniper, DYOR. Look at the TG group, the contract's code, scanning tools.
 
-When using the launch sniper, DYOR. Look at the TG group, the contract's code, scanning tools
-
-The mini audit feature can’t be 100% accurate but aims to filter out the majority of scams / hacks and reduce the chance of losing your money.
+The mini audit feature is not 100% accurate but aims to filter out the majority of scams / hacks and reduce the chance of losing your money.
 If a programmer creates token code in a unique way, they may be able to bypass detection although this is generally quite rare, as the majority of tokens are forks of big projects with very little of the code having been changed e.g., Safemoon.
-
-We are not at fault if you decide to remortgage your house to spend on 'Shiba Inu Flocki Elon Power XXX Simp Moon token'. You get what I mean.
 
 Some good tools to use for detecting scams:
 
