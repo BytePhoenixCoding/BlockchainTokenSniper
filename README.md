@@ -104,10 +104,14 @@ BSCMultiSniper detects new tokens as soon as liquidity is added. It will check i
 
 BSCLaunchSniper allows you to snipe new token launches paired with any token (eg. BNB, BUSD). It has the ability to mempool snipe and will instantly buy when liquidity is added. It constantly updates the price and shows you the profit you've made, has the ability to autosell at a specified profit margin (eg, 2x, 10x etc) and also allows you to sell manually with your keyboard. 
 
- The multisniper can check if:
--	Token's source code is verified.
-- Token is a honeypot
-- Token is a rug (StaySAFU scanner will be used)
+ The multisniper will be able to check if:
+ - Token is a honeypot
+ - Token's buy/sell fees are too large
+ - Token has any scams in code
+ - Token's code is verified
+ - Token's ownership is renounced
+ - Token's liquidity is locked
+
 
 The user can decide whether to enable the mini audit or turn it off (bear in mind you will likely be investing in a lot of scams / rugpulls / honeypots if you don’t).
 Once the token has/hasn't been through a mini audit the bot will then attempt to buy X amount of tokens with the specified amount of BNB.
@@ -125,7 +129,8 @@ How do the developers make money? What are the fees?
 From v1.4 onwards the bot will have a tax on profit made: in the launch sniper a tax of 5% will be auto sent to the dev's wallet. For the multi sniper, a tax of 10% is applied. The tax is only sent when profit is made and there is no dev fees if you break even or lose money. This allows us to offer everyone the bot free of charge, as most people do not want to pay hundreds or thousands of dollars for sniper bots. The fees made massively support the project and allow us to test out new features.
 
 
-© Copyright 2021 
+
+© Copyright 2021 - any attempt to try and sell, modify, decompile or copy this code is strictly forbidden and may result in legal action.
 
 ### Built With
 
