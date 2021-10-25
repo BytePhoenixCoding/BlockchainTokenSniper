@@ -126,11 +126,10 @@ The bot's source code is heavily obfuscated and compiled to prevent people steal
 
 How do the developers make money? What are the fees?
 
-From v1.4 onwards the bot will have a tax on profit made: in the launch sniper a tax of 5% will be auto sent to the dev's wallet. For the multi sniper, a tax of 10% is applied. The tax is only sent when profit is made and there is no dev fees if you break even or lose money. This allows us to offer everyone the bot free of charge, as most people do not want to pay hundreds or thousands of dollars for sniper bots. The fees made massively support the project and allow us to test out new features.
+From v1.4 onwards the bot will have a tax on profit made: both bots will have a sell fee of 10% of profits made. The tax is only sent when profit is made and there is no dev fees if you break even or lose money. This allows us to offer everyone the bot free of charge, as most people do not want to pay hundreds or thousands of dollars for sniper bots that they can't even trial first. The fees made massively support the project and allow us to test out new features.
 
 
-
-© Copyright 2021 - any attempt to try and sell, modify, decompile or copy this code is strictly forbidden and may result in legal action.
+© Copyright 2021 - any attempt to sell, modify, decompile, copy or replicate this code is strictly forbidden and may result in legal action.
 
 ### Built With
 
