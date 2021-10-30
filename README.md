@@ -101,7 +101,7 @@
 
 BSCTokenSniper is a completely free collection of 2 tools (BSCMultiSniper and BSCLaunchSniper) programmed in Python and Web3 which aim to automatically buy newly listed tokens and auto sell tokens when profitable.
 
-BSCMultiSniper detects new tokens as soon as liquidity is added. It will check if it is not a scam and if not will buy it. It will then monitor the price of the token and auto sell at the specified profit margin (eg. 1.5x, 2x, 10x etc). Massive thanks to the devs at StaySAFU scanner for allowing us to use their token scanner API.
+BSCMultiSniper detects new tokens as soon as liquidity is added. It will check if it is not a scam and if not will buy it. It will then monitor the price of the token and auto sell at the specified profit margin (eg. 1.5x, 2x, 10x etc).
 
 BSCLaunchSniper allows you to snipe new token launches paired with any token (eg. BNB, BUSD). It has the ability to mempool snipe and will instantly buy when liquidity is added. It constantly updates the price and shows you the profit you've made, has the ability to autosell at a specified profit margin (eg, 2x, 10x etc) and also allows you to sell manually with your keyboard. 
 
@@ -121,15 +121,16 @@ The bot will buy the tokens directly through the Binance Smart Chain using the P
 By avoiding web interfaces & Metamask and directly with nodes you can snipe tokens faster than any of the web-based platforms. This allows tokens to be sniped almost instantly. During our testing we found the bot would typically be within the first 3 buy transactions of all tokens it finds.
 The bot buys the tokens using the user's wallet address and private key. This information is kept secure, is only stored locally on your computer, and is only ever used to buy tokens.
 
-The bot does not incur any additional fees except from the dev fees on profit made, only fees are BSC network transaction fees and PancakeSwap fees.
+The bot does not incur any additional fees except from the dev fees on profit made, only fees are BSC / PancakeSwap gas fees.
 
 The bot's source code is heavily obfuscated and compiled to prevent people stealing code and scammers trying to bypass this system as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then that can be transferred to your main wallet. You can also use a virtual machine if you like.
 
 How do the developers make money? What are the fees?
 
-From v1.4 onwards the bot will have a tax on profit made: both bots will have a sell fee of 10% of profits made. The tax is only sent when profit is made and there is no dev fees if you break even or lose money. This allows us to offer everyone the bot free of charge, as most people do not want to pay hundreds or thousands of dollars for sniper bots that they can't even trial first. The fees made massively support the project and allow us to test out new features.
+From v1.4 onwards the bot will have a fee on profit made: both bots will have a sell fee of 10% of profits made. The fee is only sent when profit is made and there is no dev fees if you break even or lose money. This allows us to offer everyone the bot free of charge, as most people do not want to pay hundreds or thousands of dollars for sniper bots that they can't even trial first. The fees made massively support the project and allow us to test out new features.
 
-
+ We would also like to give a massive thanks to the devs at StaySAFU scanner for allowing us to use their token scanner API.
+ 
 © Copyright 2021 - any attempt to sell, modify, decompile, copy or replicate this code is strictly forbidden and may result in legal action.
 
 ### Built With
@@ -528,10 +529,10 @@ The bot isn’t sniping that fast (eg. couple seconds between detection and buyi
 
 Investing in BSC tokens / shitcoins is risky and you should be aware you could lose all your money. For this reason, NEVER invest more money than you can afford to lose. 
 
-When using the launch sniper, DYOR. Look at the TG group, the contract's code, scanning tools.
+When using the launch sniper, DYOR. Look at the TG group, the contract's code and scanning tools.
 
-The mini audit feature is not 100% accurate but aims to filter out the majority of scams / hacks and reduce the chance of losing your money.
-If a programmer creates token code in a unique way, they may be able to bypass detection although this is generally quite rare, as the majority of tokens are forks of big projects with very little of the code having been changed e.g., Safemoon.
+The mini audit feature does not guarantee that the token is 100% safe but the chances of it being a scam are very small.
+If a programmer creates token code in a unique way, they may be able to bypass detection although this is generally quite rare, as the majority of tokens are forks of big projects with very little of the code having been changed e.g, Safemoon.
 
 Some good tools to use for detecting scams:
 
