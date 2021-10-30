@@ -411,31 +411,31 @@ For BSCMultiSniper:
 
 For BSCLaunchSniper:
 
-"walletAddress": wallet address
+* walletAddress: wallet address to use for sniping.
 
-"walletPrivateKey": wallet private key (must be a private key, NOT seed phrase)
+* walletPrivateKey: wallet private key (must be a private key, NOT seed phrase)
 
-"pancakeSwapRouterAddress": chosen router address, recommended to leave at default
+* pancakeSwapRouterAddress: chosen router address, recommended to leave at default
 
-"pancakeSwapFactoryAddress": chosen factory address, recommended to leave at default
+* liquidityPairAddress: chosen liquidity pair address - is WBNB by default, but you can set to BUSD, USDC, USDT etc to snipe BUSD etc paired tokens
 
-"liquidityPairAddress": chosen liquidity pair address - is WBNB by default, but you can set to BUSD, USDC, USDT etc to snipe BUSD etc paired tokens
+* nonBNBPairAddress: (True/False) if the liquidity pair address is not BNB, eg. if you use BUSD then set to False, if using BNB then set to True
 
-"nonBNBPairAddress": (True/False) if the liquidity pair address is not BNB, eg. if you use BUSD then set to False, if using BNB then set to True
+* bscNode: your BSD node URL (must start with wss://), recommended to use speedynode but you can use a private node if you wish
 
-"bscNode": your BSD node URL (must start with wss://), recommended to use speedynode but you can use a private node if you wish
+* transactionRevertTimeSeconds: TX revert time in seconds, recommended to leave at default
 
-"transactionRevertTimeSeconds": TX revert time in seconds, recommended to leave at default
+* gasAmount: amount of gas for bot to use in TX's, recommended to leave at 3 mil
 
-"gasAmount": amount of gas for bot to use in TX's, recommended to leave at 3 mil
+* gasPrice: price of gas for but to use in TX's, recommended to leave at 5, you can increase for faster snipes eg. 6, 7 (you may have to increase gas amount though)
 
-"gasPrice": price of gas for but to use in TX's, recommended to leave at 5, you can increase for faster snipes eg. 6, 7 (you may have to increase gas amount though)
+* approveSellTimeDelay: time to delay for getting receipt of approve TX's, recommended to leave at default
 
-"approveSellTimeDelay": time to delay for getting receipt of approve TX's, recommended to leave at default
+* stopLossMultiplier: the bot will sell when value of tokens is below the threshold eg. 0.5 means bot will sell when less than 1/2 of its original value.
 
-"sellTokens": (True/False) Do you want to sell tokens through the bot. Recommended to leave at True as selling will be alot faster and easier.
+* sellTokens: (True/False) Do you want to sell tokens through the bot. Recommended to leave at True as selling will be alot faster and easier.
 
-"showPoocoinPage": (True/False) Do you want to display poocoin page in your web browser when tokens are bought.
+* showPoocoinPage: (True/False) Do you want to display poocoin page in your web browser when tokens are bought.
 
 
 # Mini audit
@@ -450,7 +450,7 @@ Note: be very careful when editing config.json and make sure to not alter the sy
 
 -	Do not worry if you are not seeing any new tokens being detected. There are often around 10-20 new tokens being created per minute but that can vary quite a lot. Sometimes no new tokens may be detected for a few minutes.
 
-- make sure your input a private key (eg. 7d655977921bf61e25d29075712ec7aFce28b8d71aa4c7d8d5d403e28efed8b9) into the program and not a seed phrase.
+- make sure your input a private key (eg. 7d655977921bf21e25d29075712ee7aFce28b8d71aa4c7d8d5d403e28efeb879) into the program and not a seed phrase.
 
 -	Please check that you have enough BNB in your wallet to afford sniping new tokens. If you don’t the bot will not work. If using a different liquidity pair address make sure theres enough of that token to use for sniping as well.
 
