@@ -581,6 +581,9 @@ then its likely to be a scam.
 6) If you can message in the group, post a message like "Everyone, please make sure to check the token is not a scam on honeypot.is / bscheck.eu / rugpulldetector.com". Do not directly say that it is a scam, legit admins should not have a problem with a message like this, scam admins will most likely block you / delete the message.
 7) Use option 2 of the sniper a few mins before launch (5-10 mins) and it is recommended to sell early (first 5 mins).
 
+# Future plans
+
+- Convert launch sniper and multi sniper to work on ethereum and polygon blockchain.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
