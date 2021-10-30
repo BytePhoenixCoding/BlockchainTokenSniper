@@ -100,14 +100,14 @@
 
 BSCTokenSniper is a completely free collection of 2 tools (BSCMultiSniper and BSCLaunchSniper) programmed in Python and Web3 which aim to automatically buy newly listed tokens and auto sell tokens when profitable.
 
-BSCMultiSniper detects new tokens as soon as liquidity is added. It will check if it is not a scam and if not will buy it. It will then monitor the price of the token and auto sell at the specified profit margin (eg. 1.5x, 2x, 10x etc).
+BSCMultiSniper detects new tokens as soon as liquidity is added. It will check if it is not a scam and if not will buy it. It will then monitor the price of the token and auto sell at the specified profit margin (eg. 1.5x, 2x, 10x etc). Massive thanks to the devs at StaySAFU scanner for allowing us to use their token scanner API.
 
 BSCLaunchSniper allows you to snipe new token launches paired with any token (eg. BNB, BUSD). It has the ability to mempool snipe and will instantly buy when liquidity is added. It constantly updates the price and shows you the profit you've made, has the ability to autosell at a specified profit margin (eg, 2x, 10x etc) and also allows you to sell manually with your keyboard. 
 
- The multisniper will be able to check if:
+ The multisniper is able to check if:
  - Token is a honeypot
  - Token's buy/sell fees are too large
- - Token has any scams in code
+ - Token has any scams / exploits in code
  - Token's code is verified
  - Token's ownership is renounced
  - Token's liquidity is locked
@@ -137,8 +137,7 @@ This project is built with:
 
 * [Python3.9](https://www.python.org/downloads/)
 * [Web3](https://web3py.readthedocs.io/en/stable/)
-* [BscScan Api](https://bscscan.com/apis)
-* Python keyboard module
+* [Keyboard Module](https://pypi.org/project/keyboard/) (for launch sniper)
 
 
 <!-- GETTING STARTED -->
@@ -154,7 +153,6 @@ BSCTokenSniper is completely free to use and there are no setup costs.
 - Windows, Mac, Linux or Android OS (windows preferred)
 - A reasonably fast internet connection
 - Python 3 or later installed (ideally 3.9.7 or later)
-- BscScan API key (free of charge, create an account on BscScan and generate a free API key)
 - BSC wallet address and private key (not seed phrase)
 - A BSC node (generate one free of charge from moralis.io - steps are available further below)
 - Enough BNB in your wallet to snipe tokens (and other paired tokens if you choose a different liquidity pair address eg. BUSD)
@@ -366,26 +364,48 @@ When you download the bot, you will find a config.json file. This is where you n
 
 For BSCMultiSniper:
 
-* walletAddress: your BSC wallet address (e.g., Metamask) 
-* walletPrivateKey: your private key of your wallet address (your private key is kept safe and not shared in any other place: DO NOT share with anyone else)
+* walletAddress (string): your BSC wallet address (e.g., Metamask) 
+* walletPrivateKey (string): your private key of your wallet address (your private key is kept safe and not shared in any other place: DO NOT share with anyone else)
 
-* amountToSpendPerSnipe: The amount in BNB you want your wallet to spend on every new token. (e.g., 0.00025 means a new snipe will spend 0.00025 BNB on the new token)
+* totalAllowedSnipes (integer): total amount of new tokens you would like to snipe until program will stop buying. Leave at -1 to disable (to buy new tokens indefinitely).
+* amountToSpendPerSnipe (float): The amount in BNB you want your wallet to spend on every new token. (e.g, 0.00025 means a new snipe will spend 0.00025 BNB on the new token)
 
-* transactionRevertTimeSeconds: Time to spend before transaction reverts. Recommended to leave at default.
+* transactionRevertTimeSeconds (integer): Time to spend in seconds before transaction reverts. Recommended to leave at default.
 
-* gasAmount: amount of max gas to use per transaction. Recommended to leave at default.
+* gasAmount (integer): amount of max gas to use per transaction. Recommended to leave at default.
 
-* gasPrice:  max price of gas to use per transaction. Recommended to leave at default.
+* gasPrice (integer):  max price of gas to use per transaction. Recommended to leave at default.
 
-* bscNode: Address for custom BSC node. Recommended to leave at default.
+* bscNode (string): Address for custom BSC node. Make sure it starts with (wss://). Recommended to leave at default.
 
-* bscScanAPIKey: Your API key from BscScan.
+* liquidityPairAddress (string): Address for liquidity pairs. Recommended to leave at default.
 
-* liquidityPairAddress: Address for liquidity pairs. Recommended to leave at default.
+* minLiquidityAmount (float): The minimum amount of liquidity in BNB in a token that the bot will purchase. The bot detects the amount of BNB in a newly detected token, and only buys tokens that have liquidity higher than the amount specified in the config file. Set to -1 to disable.
 
-* minLiquidityAmount: The minimum amount of liquidity in BNB in a token that the bot will purchase. The bot detects the amount of BNB in a newly detected token, and only buys tokens that have liquidity higher than the amount specified in the config file. Set to -1 to disable.
+* autoSellTakeProfitMultiplier (float): Profit multiplier to auto-sell at, eg. set to 2 to sell at 2x original purchase value, 10 for 10x etc.
 
-* observeOnly: enabling this will bypass the mini audit feature which allows you to observe how the bot audits tokens. Recommended to try this at the start to make sure the bot can scan for new tokens.
+* approveSellTimeDelay (integer): Time in seconds to wait until bot will try to attempt approve transaction for selling. Recommended to leave at default.
+
+* observeOnly (True/False): Allows you to see how the bot detects new token. Recommended to leave at default.
+
+* enableMiniAudit (True/False): Allows you to enable/disable mini audit. Highly recommended to enable or you will most likely be buying scam tokens.
+
+- The following options are related to the mini audit feature:
+
+* checkHoneypot (True/False): Check if token is a honeypot. Highly recommended to enable.
+
+* maxBuyFee (integer): Max buy fee allowed for sniping in percentage eg. set to 20 to avoid buying tokens with over 20% buy fee. Recommended to leave at 20 or lower.
+ 
+* maxSellFee (integer): Max sell fee allowed for sniping in percentage eg. set to 20 to avoid buying tokens with over 20% buy fee. Recommended to leave at 20 or lower.
+ 
+* maxLiquidityRisk (integer): Max liquidity risk (0-100) allowed. 0 is safest, 100 is least safest. Recommended to leave at 0. 
+ 
+* checkCodeVerified (True/False): Check if code is verified eg. set to true to avoid tokens that haven't verified code. Recommended to leave at True.
+ 
+* allowOwnerAccess (True/False): Check if contract owner has access to token eg. set to False to disable tokens that haven't renounced ownership. Recommended to leave at False.
+
+
+
 
 For BSCLaunchSniper:
 
