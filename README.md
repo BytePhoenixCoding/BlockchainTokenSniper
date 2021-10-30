@@ -78,7 +78,8 @@
     <li>
       <a href="#version">Versions</a>
       <ul>
-        <li><a href="#v13">v1.3 Beta</a></li>
+        <li><a href="#v14">v1.4 Beta</a></li>
+        <li><a href="#v13">v1.3</a></li>
         <li><a href="#v12">v1.2</a></li>
         <li><a href="#v11">v1.1</a></li>
       </ul>
