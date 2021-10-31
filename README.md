@@ -103,7 +103,7 @@ BSCTokenSniper is a completely free collection of 2 tools (BSCMultiSniper and BS
 
 BSCMultiSniper detects new tokens as soon as liquidity is added. It will check if it is not a scam and if not will buy it. It will then monitor the price of the token and auto sell at the specified profit margin (eg. 1.5x, 2x, 10x etc).
 
-BSCLaunchSniper allows you to snipe new token launches paired with any token (eg. BNB, BUSD). It has the ability to mempool snipe and will instantly buy when liquidity is added. It constantly updates the price and shows you the profit you've made, has the ability to autosell at a specified profit margin (eg, 2x, 10x etc) and also allows you to sell manually with your keyboard. 
+BSCLaunchSniper allows you to snipe new token launches paired with any token (eg. BNB, BUSD). It has the ability to mempool snipe and will instantly buy when liquidity is added. It constantly updates the price and shows you the profit you've made, has the ability to autosell at a specified profit margin (eg, 2x, 10x etc) and also allows you to sell manually with your keyboard. You can use the spacebar to sell 100% of your tokens or use keys 1-9 to sell 10-90% of your tokens.
 
  The multisniper is able to check if:
  - Token is a honeypot
