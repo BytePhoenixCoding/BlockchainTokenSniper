@@ -254,6 +254,8 @@ pip install -U web3
 
 ## Mac (Intel / Universal)
 
+NOTE: BSCLaunchSniper is currently not working for M1 Macs (Apple silicon chips) due to the keyboard module being incompatible.
+
 1) Make sure python 3 is installed
 
 - open terminal window
