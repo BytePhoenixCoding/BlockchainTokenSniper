@@ -254,7 +254,7 @@ pip install -U web3
 
 ## Mac (Intel / Universal)
 
-NOTE: BSCLaunchSniper is currently not working for M1 Macs (Apple silicon chips) due to the keyboard module being incompatible.
+NOTE: BSCLaunchSniper is currently not working for M1 Macs (Apple silicon chips) due to the keyboard module being incompatible. This will hopefully be fixed in the future.
 
 1) Make sure python 3 is installed
 
@@ -296,15 +296,6 @@ NOTE: BSCLaunchSniper is currently not working for M1 Macs (Apple silicon chips)
 - Choose yellow BSC Network icon on right
 - Click Endpoints
 - Take key from top line and paste in (address must start with wss://)
-
-- Add your BscScan private API key to line 14
-   "bscScanAPIKey": "put_BSC_API_key_here",
-- To get a free API key just register at https://bscscan.com/
-- Go to API-KEYs menu option on left
-- Click blue '+Add' button next to text 'My API Keys'
-- Choose name for API key (can be anything)
-- Copy key value from 'API-Key token' column
-
 
 4) Run script 
 
@@ -452,7 +443,7 @@ Note: be very careful when editing config.json and make sure to not alter the sy
 
 -	Do not worry if you are not seeing any new tokens being detected. There are often around 10-20 new tokens being created per minute but that can vary quite a lot. Sometimes no new tokens may be detected for a few minutes.
 
-- make sure your input a private key (eg. 7d655977921bf21e25d29075712ee7aFce28b8d71aa4c7d8d5d403e28efeb879) into the program and not a seed phrase.
+- make sure your input a private key (eg. 7d655917921bf21e25d29075212ee7aFce28b8d71aa4c7d8d5a403e28efeb879) into the program and not a seed phrase.
 
 -	Please check that you have enough BNB in your wallet to afford sniping new tokens. If you don’t the bot will not work. If using a different liquidity pair address make sure theres enough of that token to use for sniping as well.
 
@@ -534,7 +525,8 @@ Investing in BSC tokens / shitcoins is risky and you should be aware you could l
 When using the launch sniper, DYOR. Look at the TG group, the contract's code and scanning tools.
 
 The mini audit feature does not guarantee that the token is 100% safe but the chances of it being a scam are very small.
-If a programmer creates token code in a unique way, they may be able to bypass detection although this is generally quite rare, as the majority of tokens are forks of big projects with very little of the code having been changed e.g, Safemoon.
+
+Crypto scams are on the rise and it seems the vast majority of tokens are either straight up scams or are too risky eg. unlocked liquidity).
 
 Some good tools to use for detecting scams:
 
@@ -555,8 +547,6 @@ app.staysafu.org/scanner
 
 - Improve reliability: the program can sometimes unexpectedly freeze / quit. This is being investigated.
 
-- Allow user to set slippage percentage - currently bot just selects the best slippage automatically.
-
 ## Donations
 
 We greatly welcome any donation of any token, it is massively appreciated and helps alot with the development of the project.
@@ -564,7 +554,7 @@ We greatly welcome any donation of any token, it is massively appreciated and he
 | Dev | BSC Address |
 |:---:|:---:|
 | BytePhoenix (founder) | 0x17fC36Fd733D2b2762c020e34E45b5C95723c9b3 |
-| CVA_CryptoPlayground | 0x3a5A12dfffD327AFdaC7BEA60ECF7A48410E873a |
+| CVA_CryptoPlayground (inactive) | 0x3a5A12dfffD327AFdaC7BEA60ECF7A48410E873a |
 
 
 # How to pre audit tokens for launch sniping
