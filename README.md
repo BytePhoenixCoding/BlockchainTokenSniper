@@ -1,4 +1,4 @@
-* BSCTokenSniper v1.4 Beta is available for testing which is far better than the above versions, please check the telegram link for a link to the testing group where you can find the zip file.
+* BSCTokenSniper v1.4 Beta is available for testing which is far better than the above versions, please check the telegram link below for a link to the testing group where you can find the zip file.
 
 * v1.3 and earlier versions are now abandoned in favour of v1.4. The code isn't available on github yet and more testing still needs to be done but it is mostly reliable.
 
@@ -153,7 +153,7 @@ To get a local copy up and running follow these simple steps.
 BSCTokenSniper is completely free to use and there are no setup costs.
 
 - Windows, Mac, Linux or Android OS (windows preferred)
-- A reasonably fast internet connection
+- A reasonably fast internet connection (10mbps+)
 - Python 3 or later installed (ideally 3.9.7 or later)
 - BSC wallet address and private key (not seed phrase)
 - A BSC node (generate one free of charge from moralis.io - steps are available further below)
