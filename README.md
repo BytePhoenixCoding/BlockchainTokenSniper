@@ -585,6 +585,7 @@ then its likely to be a scam.
 # Future plans
 
 - Convert launch sniper and multi sniper to work on ethereum and polygon blockchain.
+- Develop telegram sniper to be added to multi sniper
 - Develop website (domain blockchaintokensniper.com has been registered)
 
 <!-- MARKDOWN LINKS & IMAGES -->
