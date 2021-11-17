@@ -484,7 +484,9 @@ The bot cannot connect properly to the node. Make sure the node not overloaded /
 Your python version is too low. Use the latest version of python (3.9.7 has been tested and works well) and uninstall older versions of python.
 
 ```ValueError: {'code': -32000, 'message': 'insufficient funds for gas * price + value'}```
-You do not have enough BNB in your wallet to snipe with, or you dont have enough of the liquidity paired token specified (eg. BUSD). Make sure your wallet has enough BNB / specified pair token and try again.
+You do not have enough BNB in your wallet to snipe with, or you dont have enough of the liquidity paired token specified (eg. BUSD). Make sure your wallet has enough BNB / specified pair token and try again. 
+
+You may wonder why this issue happens even if you have enough BNB in your wallet. Usually the reason is how the gas is calculated: even though you are very unlikely to use the full gas limit (eg. 2.5 mil) the bot still needs to make sure that you could technically afford it and enough BNB / alt pair (eg. BUSD) to pay for the snipe. 1 gwei is 0.000000001, so 5 gwei is 0.000000005. When you multiply 0.000000005 by 2.5 million you get 0.0125 BNB, so for these settings you would need at least this amount + snipe amount in your wallet. You can reduce the amount needed in your wallet by reducing the gas limit.
 
 ```ModuleNotFoundError: No module named 'web3'```
 You do not have web3 installed or python does not recognise it. Install it with ```pip install web3``` in cmd line or reinstall if faulty.
