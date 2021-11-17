@@ -134,7 +134,7 @@ The bot buys the tokens using the user's wallet address and private key. This in
 
 The bot does not incur any additional fees except from the dev fees on profit made, only fees are BSC / PancakeSwap gas fees.
 
-The bot's source code is heavily obfuscated and compiled to prevent people stealing code and scammers trying to bypass this system as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then that can be transferred to your main wallet. You can also use a virtual machine if you like.
+The bot's source code is heavily obfuscated and compiled to prevent people stealing code and scammers trying to bypass this system as this has happened before. If you have concerns about the security of this bot then you should create a new wallet with a small amount of BNB and use that wallet's details in the config file. If you make a profit then that can be transferred to your main wallet. You can also use a virtual machine if you like. Another reason the code is obfuscated is that it prevents people from ripping off the code and trying to make / promote their own bot which would cause the developers to lose out on income, and preventing people from disabling the dev fee as alot of effort has gone into making this bot.
 
 How do the developers make money? What are the fees?
 
