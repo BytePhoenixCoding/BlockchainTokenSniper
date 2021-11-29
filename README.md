@@ -421,7 +421,7 @@ For BSCLaunchSniper:
 
 * liquidityPairAddress: chosen liquidity pair address - is WBNB by default, but you can set to BUSD, USDC, USDT etc to snipe BUSD etc paired tokens
 
-* nonBNBPairAddress: (True/False) if the liquidity pair address is not BNB, eg. if you use BUSD then set to False, if using BNB then set to True
+* nonBNBPairAddress: (True/False) if the liquidity pair address is not BNB, eg. if you use BUSD then set to True, if using BNB then set to False.
 
 * bscNode: your BSD node URL (must start with wss://), recommended to use speedynode but you can use a private node if you wish
 
