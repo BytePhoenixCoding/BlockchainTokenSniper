@@ -182,23 +182,7 @@ The bot can be run on the following OS's:
 
 1. Download git [Git](https://git-scm.com/)
 2. Download python [Python3.9](https://www.python.org/)
-3. Clone the repo: 
-
-      ```sh
-      git clone https://github.com/BytePhoenixData/BSCTokenSniper.git 
-      ```
-
-4. Go to repo directory
-
-5. and run : 
-      ```sh
-      cd BSCTokenSniper
-      ```
-6. Install Web3:
-
-      ```sh
-      pip install web3
-      ```
+3. Download from Telegram testing group (link is above)
 
    If you facing an error during the web3 installation, you may need the following microsoft visual studio build tool.
    use this [link](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
