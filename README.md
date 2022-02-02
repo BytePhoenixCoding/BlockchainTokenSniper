@@ -1,4 +1,4 @@
-* BSCTokenSniper v1.4 Beta is available for testing which is far better than the above versions, please check the telegram link below for a link to the testing group where you can find the zip file. DO NOT install via git, download from the telegram group instead for now.
+* All new versions are now at blockchaintokensniper.com
 
 * <a href="https://t.me/blockchaintokensniper">Telegram Group</a>
 
