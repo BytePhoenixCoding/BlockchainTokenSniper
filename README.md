@@ -7,12 +7,6 @@
 * This description is still a bit of a mess as new features are still being added and tested constantly to v1.4. Some parts of the description are irrelevant or outdated.
 
 
-<!--[![Contributors][contributors-shield][contributors-url] -->
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-<!--[![LinkedIn][linkedin-shield]
-[linkedin-url]-->
 
 ## Environment 
 <p align='left'>
