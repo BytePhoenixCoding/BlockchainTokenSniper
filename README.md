@@ -1,7 +1,7 @@
 <h1>BlockchainTokenSniper</h1>
 
 * Source code for BlockchainLaunchSniper and BlockchainMultiSniper is now released.
-To run the bot from code, download the zip file, edit config.json and run Launch.bat (or equivalent command for Mac / Linux).
+To run the bot from code, download the zip file, edit config.json, buy tier <a href="blockchaintokensniper.com/buy">here</a> and run Launch.bat (or equivalent command for Mac / Linux).
 
 * Download Win / Mac / Linux binaries at <a href="https://blockchaintokensniper.com">blockchaintokensniper.com</a>.
 
