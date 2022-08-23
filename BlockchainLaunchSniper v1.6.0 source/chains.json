@@ -1,0 +1,50 @@
+{
+  "56": {
+    "name": "BSC",
+    "currencySymbol": "BNB",
+    "txType":  "0",
+    "logoColour": "226"
+  },
+  "97": {
+    "name": "BSCTestnet",
+    "currencySymbol": "BNB",
+    "txType": "0",
+    "logoColour": "226"
+  },
+  "1": {
+    "name": "Ethereum",
+    "currencySymbol": "Ether",
+    "txType": "0",
+    "logoColour": "32"
+  },
+  "43114": {
+    "name": "Avalanche",
+    "currencySymbol": "AVAX",
+    "txType": "2",
+    "logoColour": "196"
+  },
+  "137": {
+    "name": "Polygon",
+    "currencySymbol": "MATIC",
+    "txType": "0",
+    "logoColour": "93"
+  },
+  "25": {
+    "name": "Cronos",
+    "currencySymbol": "CRO",
+    "txType": "0",
+    "logoColour": "20"
+  },
+  "250": {
+    "name": "Fantom",
+    "currencySymbol": "FTM",
+    "txType": "0",
+    "logoColour": "38"
+  },
+  "2001": {
+    "name": "Milkomeda",
+    "currencySymbol": "mADA",
+    "txType": "0",
+    "logoColour": "119"
+  }
+}
