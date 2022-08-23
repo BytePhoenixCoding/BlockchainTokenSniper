@@ -1,8 +1,11 @@
-<h1>Please see website below to get access to bot, nothing is hosted here anymore.</h1>
+<h1>BlockchainTokenSniper</h1>
 
-* All new versions are now at <a href="https://blockchaintokensniper.com">blockchaintokensniper.com</a>.
+* Source code for BlockchainLaunchSniper and BlockchainMultiSniper is now released.
+To run the bot from code, download the zip file, edit config.json and run Launch.bat (or equivalent command for Mac / Linux).
 
-* Join telegram group <a href="https://t.me/blockchaintokensniper">here</a>.
+* Download Win / Mac / Linux binaries at <a href="https://blockchaintokensniper.com">blockchaintokensniper.com</a>.
+
+* Join telegram group <a href="https://t.me/blockchaintokensniper">here</a> for more info / advice.
 
 
 
