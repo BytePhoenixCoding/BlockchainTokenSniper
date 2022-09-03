@@ -7,7 +7,7 @@ To run the bot from code, download the zip file, edit config.json, buy tier <a h
 
 * Join telegram group <a href="https://t.me/blockchaintokensniper">here</a> for more info / advice.
 
-If you found this bot useful, please consider donating BNB / ether / anything else to 0x3054441c49d7b3db9fa34b008f00f311dd253ac4.
+If you found this bot / code useful, please consider donating BNB / ether / anything else to 0x3054441c49d7b3db9fa34b008f00f311dd253ac4.
 
 
 
