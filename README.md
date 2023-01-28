@@ -18,10 +18,10 @@ https://bscscan.com/address/0xf96bcf9d4a340911f3fd735b56d11ad5cb6ad85d
  3. Go to ‘buyTier’
  4. Choose a tier ID:
 
-(1) Bronze: 0.2 BNB
-(2) Silver: 0.4 BNB
-(3) Gold: 0.6 BNB
-(4) Diamond: 1 BNB
+(1) Bronze: 0.2 BNB<br>
+(2) Silver: 0.4 BNB<br>
+(3) Gold: 0.6 BNB<br>
+(4) Diamond: 1 BNB<br>
 
  4. Enter in the corresponding BNB cost, tier ID (1-4) and “0x0000000000000000000000000000000000000000” for refAddress (unless you were referred, in which case put the referrer’s address in)
  5. Click ‘Write’ and confirm transaction.
