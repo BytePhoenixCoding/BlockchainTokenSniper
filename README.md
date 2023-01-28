@@ -10,7 +10,7 @@ To run the bot from code, download the zip file, edit config.json, buy tier (det
 
  1. Go to the following link: https://bscscan.com/address/0xf96bcf9d4a340911f3fd735b56d11ad5cb6ad85d
 
- 2. Go to the 'Contracts' tab then ‘Write’ tab
+ 2. Go to the 'Contract' tab then the ‘Write Contract’ tab below
  3. Go to ‘buyTier’
  4. Choose a tier ID:
 
