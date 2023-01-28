@@ -1,6 +1,4 @@
-<h1>BlockchainTokenSniper (discontinued)</h1>
-
-* BTS is now discontinued indefinitely for now.
+<h1>BlockchainTokenSniper</h1>
 
 * Source code for BlockchainLaunchSniper and BlockchainMultiSniper is now released.
 To run the bot from code, download the zip file, edit config.json, buy tier (details below) and run Launch.bat (or equivalent command for Mac / Linux).
