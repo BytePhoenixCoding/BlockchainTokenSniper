@@ -19,7 +19,7 @@ To run the bot from code, download the zip file, edit config.json, buy tier (det
 (4) Gold: 0.6 BNB<br>
 (5) Diamond: 1 BNB<br>
 
- 4. Enter in the corresponding BNB cost, tier ID (1-4) and “0x0000000000000000000000000000000000000000” for refAddress (unless you were referred, in which case put the referrer’s address in)
+ 4. Enter in the corresponding BNB cost, tier ID (2-5) and “0x0000000000000000000000000000000000000000” for refAddress (unless you were referred, in which case put the referrer’s address in)
  5. Click ‘Write’ and confirm transaction.
 
 NOTE: make sure that the wallet you purchase tier with is the wallet you use for the bot.
