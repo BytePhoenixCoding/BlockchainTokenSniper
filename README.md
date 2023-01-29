@@ -14,10 +14,10 @@ To run the bot from code, download the zip file, edit config.json, buy tier (det
  3. Go to ‘buyTier’
  4. Choose a tier ID:
 
-(1) Bronze: 0.2 BNB<br>
-(2) Silver: 0.4 BNB<br>
-(3) Gold: 0.6 BNB<br>
-(4) Diamond: 1 BNB<br>
+(2) Bronze: 0.2 BNB<br>
+(3) Silver: 0.4 BNB<br>
+(4) Gold: 0.6 BNB<br>
+(5) Diamond: 1 BNB<br>
 
  4. Enter in the corresponding BNB cost, tier ID (1-4) and “0x0000000000000000000000000000000000000000” for refAddress (unless you were referred, in which case put the referrer’s address in)
  5. Click ‘Write’ and confirm transaction.
