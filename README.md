@@ -1,7 +1,7 @@
 <h1>BlockchainTokenSniper</h1>
 
 
-* Join telegram group <a href="https://t.me/blockchaintokensniper">here</a> for more info / advice.
+* More info on our website: <a href="https://blockchaintokensniper.github.io" target="_blank">blockchaintokensniper.github.io</a>
 
 
 
