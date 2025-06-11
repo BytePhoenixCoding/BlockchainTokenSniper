@@ -2,5 +2,5 @@
 
 BTS V3 is now available on <a href="t.me/btsv3bot">Telegram</a>.
 
-Main group: t.me/blockchaintokensniper
+Main group: t.me/blockchaintokensniper<br>
 Website: blockchaintokensniper.github.io
